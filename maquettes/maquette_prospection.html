@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Maquette - Prospection</title>
+<style>
+@font-face { font-family: "Fraunces"; src: url("../app/web/node_modules/@fontsource-variable/fraunces/files/fraunces-latin-wght-normal.woff2") format("woff2"); font-weight: 100 900; }
+@font-face { font-family: "Geist"; src: url("../app/web/node_modules/@fontsource-variable/geist/files/geist-latin-wght-normal.woff2") format("woff2"); font-weight: 100 900; }
+:root {
+  --violet: #5723F3; --violet-doux: #efe9ff; --marine: #120A29; --creme: #FAF9F6; --encre: #1b1530; --gris: #6b6680;
+  --trait: #e7e3ef; --carte: #ffffff; --vert: #1f9d6b; --vert-doux: #e5f6ee; --rouge: #d6455d; --ambre: #e8a33d;
+  /* prospection : la nuit, accent corail */
+  --p-fond: #0f0b1d; --p-carte: #1a1430; --p-carte2: #221a3d; --p-trait: #2f2650; --p-texte: #f3f0fa; --p-gris: #a49cbf;
+  --corail: #ff7a59; --corail-doux: rgba(255,122,89,.14);
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body { font-family: "Geist", system-ui, sans-serif; color: var(--encre); background: var(--creme); font-size: 14px; line-height: 1.45; transition: background .5s, color .5s; }
+body.prospection { background: var(--p-fond); color: var(--p-texte); }
+.fond { position: fixed; inset: 0; pointer-events: none; z-index: 0; transition: opacity .6s;
+  background: radial-gradient(60% 50% at 85% 0%, rgba(87,35,243,.16), transparent 70%), radial-gradient(40% 40% at 0% 100%, rgba(255,122,89,.07), transparent 70%); }
+body.prospection .fond { background: radial-gradient(55% 45% at 90% 0%, rgba(255,122,89,.18), transparent 70%), radial-gradient(50% 50% at 0% 100%, rgba(87,35,243,.25), transparent 70%); }
+
+/* bandeau de maquette */
+.note-maquette { position: relative; z-index: 3; background: var(--marine); color: #cfc8e6; font-size: 12px; padding: 7px 24px; display: flex; gap: 18px; align-items: center; flex-wrap: wrap; }
+.note-maquette b { color: #fff; }
+.note-maquette button { background: transparent; color: #cfc8e6; border: 1px solid #3a3160; border-radius: 99px; padding: 3px 11px; font: inherit; cursor: pointer; }
+.note-maquette button.on { background: #fff; color: var(--marine); border-color: #fff; }
+
+/* en-tête de l'app */
+header.app { position: relative; z-index: 2; display: flex; align-items: center; gap: 18px; padding: 16px 28px; }
+.marque { display: flex; align-items: center; gap: 10px; font-weight: 650; font-size: 15px; letter-spacing: -.01em; }
+.marque .logo { width: 28px; height: 28px; border-radius: 8px; background: var(--violet); display: grid; place-items: center; color: #fff; font-family: "Fraunces"; font-size: 18px; font-weight: 700; }
+body.prospection .marque .logo { background: var(--corail); }
+.bascule { position: relative; display: inline-flex; padding: 3px; border-radius: 99px; background: rgba(18,10,41,.06); border: 1px solid var(--trait); }
+body.prospection .bascule { background: rgba(255,255,255,.06); border-color: var(--p-trait); }
+.bascule button { position: relative; z-index: 1; border: 0; background: transparent; font: inherit; font-size: 13px; font-weight: 600; padding: 6px 14px; border-radius: 99px; cursor: pointer; color: var(--gris); display: inline-flex; gap: 6px; align-items: center; transition: color .3s; }
+body.prospection .bascule button { color: var(--p-gris); }
+.bascule button.on { color: #fff; }
+body.prospection .bascule button.on { color: #1a0f0a; }
+.bascule .curseur { position: absolute; top: 3px; bottom: 3px; border-radius: 99px; background: var(--violet); transition: left .35s cubic-bezier(.23,1,.32,1), width .35s cubic-bezier(.23,1,.32,1), background .35s; }
+body.prospection .bascule .curseur { background: var(--corail); }
+.pastille { width: 7px; height: 7px; border-radius: 50%; background: currentColor; opacity: .8; }
+nav.onglets { display: flex; gap: 4px; margin-left: auto; }
+nav.onglets button { border: 0; background: transparent; font: inherit; font-weight: 550; padding: 8px 14px; border-radius: 10px; cursor: pointer; color: var(--gris); }
+body.prospection nav.onglets button { color: var(--p-gris); }
+nav.onglets button.on { background: var(--carte); color: var(--encre); box-shadow: 0 1px 2px rgba(18,10,41,.08); }
+body.prospection nav.onglets button.on { background: var(--p-carte2); color: var(--p-texte); box-shadow: none; }
+.compte { width: 34px; height: 34px; border-radius: 50%; background: var(--violet-doux); color: var(--violet); display: grid; place-items: center; font-weight: 700; font-size: 13px; }
+body.prospection .compte { background: var(--corail-doux); color: var(--corail); }
+
+main { position: relative; z-index: 1; max-width: 1240px; margin: 0 auto; padding: 8px 28px 60px; }
+.ecran { display: none; animation: entree .35s ease; }
+.ecran.on { display: block; }
+@keyframes entree { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+h1 { font-family: "Fraunces", serif; font-weight: 600; font-size: 34px; letter-spacing: -.02em; margin: 10px 0 4px; }
+.sous { color: var(--gris); margin: 0 0 22px; }
+body.prospection .sous { color: var(--p-gris); }
+h2 { font-family: "Fraunces", serif; font-weight: 600; font-size: 19px; margin: 0 0 12px; }
+.carte { background: var(--carte); border: 1px solid var(--trait); border-radius: 18px; padding: 18px 20px; }
+body.prospection .carte { background: var(--p-carte); border-color: var(--p-trait); }
+.etiquette { display: inline-flex; align-items: center; gap: 6px; font-size: 11.5px; font-weight: 650; padding: 3px 9px; border-radius: 99px; }
+.et-q { background: var(--violet-doux); color: var(--violet); }
+.et-p { background: var(--corail-doux); color: #d9532f; }
+body.prospection .et-p { color: var(--corail); }
+.btn { border: 0; font: inherit; font-weight: 600; font-size: 13px; padding: 9px 14px; border-radius: 11px; cursor: pointer; display: inline-flex; gap: 7px; align-items: center; }
+.btn-q { background: var(--violet); color: #fff; }
+.btn-p { background: var(--corail); color: #1a0f0a; }
+.btn-l { background: transparent; border: 1px solid var(--trait); color: var(--encre); }
+body.prospection .btn-l { border-color: var(--p-trait); color: var(--p-texte); }
+.muet { color: var(--gris); font-size: 12.5px; }
+body.prospection .muet { color: var(--p-gris); }
+
+/* ---- tableau de bord ---- */
+.chiffres { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-bottom: 22px; }
+.chiffre .n { font-family: "Fraunces"; font-size: 32px; font-weight: 600; line-height: 1; margin: 6px 0 2px; }
+.dash { display: grid; grid-template-columns: 1.55fr 1fr; gap: 18px; }
+.rdv { display: grid; grid-template-columns: 64px 1fr auto; gap: 14px; align-items: center; padding: 14px 0; border-top: 1px solid var(--trait); }
+.rdv:first-of-type { border-top: 0; }
+.rdv .h { font-family: "Fraunces"; font-size: 19px; font-weight: 600; }
+.rdv .nom { font-weight: 650; font-size: 15px; }
+.rdv .det { color: var(--gris); font-size: 12.5px; }
+.barre-p { height: 6px; border-radius: 99px; background: #f1edf7; overflow: hidden; margin-top: 7px; width: 180px; }
+.barre-p i { display: block; height: 100%; background: var(--corail); border-radius: 99px; }
+.funnel-mini { display: flex; flex-direction: column; gap: 8px; }
+.fm-ligne { display: grid; grid-template-columns: 130px 1fr 26px; gap: 10px; align-items: center; font-size: 13px; }
+.fm-barre { height: 22px; border-radius: 7px; background: linear-gradient(90deg, var(--corail), #ffb199); }
+
+/* ---- prospection : journée ---- */
+.p-grille { display: grid; grid-template-columns: 300px 1fr; gap: 18px; }
+.liste-p .item { padding: 12px 12px; border-radius: 13px; cursor: pointer; display: grid; grid-template-columns: 38px 1fr; gap: 10px; align-items: center; }
+.liste-p .item.on { background: var(--p-carte2); outline: 1px solid var(--corail); }
+.ini { width: 38px; height: 38px; border-radius: 11px; background: var(--p-carte2); display: grid; place-items: center; font-family: "Fraunces"; font-weight: 700; color: var(--corail); }
+.liste-p .item.on .ini { background: var(--corail); color: #1a0f0a; }
+.etapes { display: flex; gap: 6px; margin: 4px 0 18px; }
+.etape { flex: 1; padding: 9px 10px; border-radius: 11px; background: var(--p-carte2); border: 1px solid var(--p-trait); font-size: 12px; color: var(--p-gris); }
+.etape b { display: block; color: var(--p-texte); font-size: 12.5px; }
+.etape.faite { border-color: rgba(31,157,107,.5); }
+.etape.faite b::before { content: "✓ "; color: #3fd39a; }
+.etape.ici { background: var(--corail-doux); border-color: var(--corail); }
+.etape.ici b { color: var(--corail); }
+.crit { display: grid; grid-template-columns: repeat(2, 1fr); gap: 6px 18px; }
+.c { display: flex; gap: 9px; align-items: center; font-size: 13px; padding: 5px 0; }
+.dot { width: 18px; height: 18px; border-radius: 50%; border: 2px solid var(--p-trait); flex: none; display: grid; place-items: center; font-size: 10px; }
+.dot.ok { background: #3fd39a; border-color: #3fd39a; color: #0f0b1d; }
+.dot.part { border-color: var(--ambre); background: linear-gradient(90deg, var(--ambre) 50%, transparent 50%); }
+.dot.vise { border-color: var(--corail); }
+.c .quand { margin-left: auto; font-size: 11px; color: var(--p-gris); }
+.deux { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 14px; }
+.citation { font-family: "Fraunces"; font-style: italic; font-size: 16px; line-height: 1.4; border-left: 3px solid var(--corail); padding-left: 12px; margin: 8px 0 4px; }
+.source { font-size: 11.5px; color: var(--p-gris); }
+.entonnoir { display: flex; flex-direction: column; gap: 5px; margin-top: 6px; }
+.ent { padding: 8px 11px; border-radius: 9px; background: var(--p-carte2); font-size: 13px; }
+.ent:nth-child(1) { margin: 0 0; } .ent:nth-child(2) { margin: 0 14px; } .ent:nth-child(3) { margin: 0 28px; } .ent:nth-child(4) { margin: 0 42px; } .ent:nth-child(5) { margin: 0 56px; background: var(--corail-doux); color: var(--corail); }
+.ent small { display: block; font-size: 10.5px; text-transform: uppercase; letter-spacing: .08em; color: var(--p-gris); }
+.creneaux { display: flex; gap: 8px; margin-top: 10px; }
+.creneau { flex: 1; border: 1px dashed var(--corail); border-radius: 11px; padding: 10px; text-align: center; }
+.creneau b { display: block; font-family: "Fraunces"; font-size: 17px; }
+.ecouter { display: flex; align-items: center; gap: 12px; padding: 12px 14px; border-radius: 14px; background: var(--corail); color: #1a0f0a; font-weight: 650; margin-top: 14px; }
+.ecouter .play { width: 34px; height: 34px; border-radius: 50%; background: #1a0f0a; color: var(--corail); display: grid; place-items: center; }
+.onde { flex: 1; height: 22px; background: repeating-linear-gradient(90deg, rgba(26,15,10,.55) 0 3px, transparent 3px 7px); mask: linear-gradient(90deg, #000 35%, rgba(0,0,0,.3) 35%); border-radius: 4px; }
+
+/* ---- workflow ---- */
+.wf { display: grid; grid-template-columns: 290px 1fr; gap: 18px; }
+.reglage { display: flex; justify-content: space-between; align-items: center; padding: 9px 0; border-top: 1px solid var(--p-trait); font-size: 13px; }
+.inter { width: 34px; height: 20px; border-radius: 99px; background: var(--corail); position: relative; flex: none; }
+.inter::after { content: ""; position: absolute; right: 2px; top: 2px; width: 16px; height: 16px; border-radius: 50%; background: #fff; }
+.inter.off { background: var(--p-trait); } .inter.off::after { right: auto; left: 2px; }
+.schema { display: grid; grid-template-columns: 150px 180px 1fr 170px 150px; gap: 14px; align-items: center; }
+.col { display: flex; flex-direction: column; gap: 9px; }
+.brique { border-radius: 12px; padding: 9px 11px; font-size: 12.5px; background: var(--p-carte2); border: 1px solid var(--p-trait); }
+.brique b { display: block; font-size: 12.5px; }
+.brique span { font-size: 11px; color: var(--p-gris); }
+.brique.ok { border-color: rgba(63,211,154,.6); }
+.brique.ok b::before { content: "● "; color: #3fd39a; }
+.brique.cours { border-color: var(--corail); box-shadow: 0 0 0 3px var(--corail-doux); }
+.brique.cours b::before { content: "● "; color: var(--corail); }
+.brique.att b::before { content: "○ "; color: var(--p-gris); }
+.brique.nouveau { position: relative; }
+.brique.nouveau::after { content: "nouveau"; position: absolute; top: -8px; right: 8px; font-size: 9.5px; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; background: var(--corail); color: #1a0f0a; padding: 1px 6px; border-radius: 99px; }
+.brique.vigilance { border-style: dashed; border-color: var(--ambre); }
+.alerte { margin-top: 16px; border: 1px dashed var(--ambre); border-radius: 14px; padding: 12px 14px; font-size: 13px; color: #f5d7a6; background: rgba(232,163,61,.07); }
+.alerte b { color: #ffc56b; }
+
+/* ---- qualifié (rappel de l'existant) ---- */
+.q-grille { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
+.q-carte { background: var(--carte); border: 1px solid var(--trait); border-radius: 18px; overflow: hidden; }
+.q-carte .haut { background: var(--violet); color: #fff; padding: 14px 16px; }
+.q-carte .haut .h { font-family: "Fraunces"; font-size: 24px; font-weight: 600; }
+.q-carte .bas { padding: 14px 16px; font-size: 13px; }
+.fleche { font-size: 12px; color: var(--gris); text-align: center; margin-top: 22px; }
+</style>
+</head>
+<body>
+<div class="fond"></div>
+
+<div class="note-maquette">
+  <b>Maquette - non fonctionnelle</b>
+  <span>Écrans :</span>
+  <button data-aller="dash" class="on">1 · Tableau de bord</button>
+  <button data-aller="pjour">2 · Prospection : ma journée</button>
+  <button data-aller="pwf">3 · Prospection : workflow</button>
+  <button data-aller="qjour">4 · Qualifiés (existant)</button>
+  <span style="margin-left:auto">Prospects fictifs · interlocuteurs inventés · données d'exemple</span>
+</div>
+
+<header class="app">
+  <div class="marque"><div class="logo">e</div>Préparateur de visite</div>
+  <div class="bascule" role="tablist" aria-label="Type de rendez-vous">
+    <span class="curseur"></span>
+    <button data-mode="tous" class="on">Tous</button>
+    <button data-mode="qualifie"><span class="pastille"></span>Qualifiés</button>
+    <button data-mode="prospection"><span class="pastille"></span>Prospection</button>
+  </div>
+  <nav class="onglets" id="onglets"></nav>
+  <div class="compte">A</div>
+</header>
+
+<main>
+
+<!-- 1. TABLEAU DE BORD -->
+<section class="ecran on" id="dash">
+  <h1>Bonjour Antoine</h1>
+  <p class="sous">Lundi 19 octobre · 4 rendez-vous aujourd'hui, dont 2 premiers rendez-vous</p>
+  <div class="chiffres">
+    <div class="carte chiffre"><span class="muet">Aujourd'hui</span><div class="n">4</div><span class="muet">rendez-vous</span></div>
+    <div class="carte chiffre"><span class="muet">Clients</span><div class="n" style="color:var(--violet)">2</div><span class="muet">fiches prêtes</span></div>
+    <div class="carte chiffre"><span class="muet">Prospects</span><div class="n" style="color:#d9532f">2</div><span class="muet">premiers rendez-vous</span></div>
+    <div class="carte chiffre"><span class="muet">Cette semaine</span><div class="n">3</div><span class="muet">deuxièmes rendez-vous obtenus</span></div>
+  </div>
+  <div class="dash">
+    <div class="carte">
+      <h2>Ma journée</h2>
+      <div class="rdv"><div class="h">9h30</div><div><span class="etiquette et-q">Client</span><div class="nom">Bonduelle</div><div class="det">Villeneuve-d'Ascq · Nathalie Dubreuil, responsable achats · fiche prête</div></div><button class="btn btn-q" data-aller="qjour">Préparer</button></div>
+      <div class="rdv"><div class="h">11h00</div><div><span class="etiquette et-p">Premier rendez-vous</span><div class="nom">Hermès</div><div class="det">Pantin · Claire Vasseur, directrice achats emballage · 3 critères sur 7 déjà connus</div><div class="barre-p"><i style="width:43%"></i></div></div><button class="btn btn-p" data-aller="pjour">Préparer</button></div>
+      <div class="rdv"><div class="h">14h00</div><div><span class="etiquette et-q">Client</span><div class="nom">Lesaffre</div><div class="det">Marcq-en-Barœul · Philippe Delattre, directeur industriel · fiche à 13h15</div></div><button class="btn btn-q" data-aller="qjour">Préparer</button></div>
+      <div class="rdv"><div class="h">16h30</div><div><span class="etiquette et-p">Premier rendez-vous</span><div class="nom">EssilorLuxottica</div><div class="det">Visio · Marc Delorme, responsable supply chain · aucun critère connu</div><div class="barre-p"><i style="width:4%"></i></div></div><button class="btn btn-p" data-aller="pjour">Préparer</button></div>
+      <p class="fleche">Chaque bouton « Préparer » ouvre la bonne section : violet pour un client, corail pour un prospect.</p>
+    </div>
+    <div class="carte">
+      <h2>Mes prospects</h2>
+      <div class="funnel-mini">
+        <div class="fm-ligne"><span>Lead</span><div class="fm-barre" style="width:100%"></div><b>6</b></div>
+        <div class="fm-ligne"><span>Rendez-vous obtenu</span><div class="fm-barre" style="width:66%"></div><b>4</b></div>
+        <div class="fm-ligne"><span>Découverte faite</span><div class="fm-barre" style="width:33%"></div><b>2</b></div>
+        <div class="fm-ligne"><span>Qualifié</span><div class="fm-barre" style="width:16%"></div><b>1</b></div>
+      </div>
+      <p class="muet" style="margin-top:14px">Hermès · EssilorLuxottica · Kering Beauté · Carrefour · Air Liquide Santé · Michelin</p>
+      <div style="margin-top:14px; padding-top:14px; border-top:1px solid var(--trait)">
+        <b style="font-size:13px">À relancer</b>
+        <p class="muet" style="margin:4px 0 0">Kering Beauté : 2 rendez-vous sans nouveau critère. La fiche suivante le signalera.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 2. PROSPECTION : MA JOURNÉE -->
+<section class="ecran" id="pjour">
+  <h1>Premier rendez-vous</h1>
+  <p class="sous">Objectif : repartir avec un deuxième rendez-vous daté.</p>
+  <div class="p-grille">
+    <div class="carte liste-p">
+      <div class="muet" style="margin:0 0 8px 4px">Aujourd'hui</div>
+      <div class="item on"><div class="ini">H</div><div><b>Hermès</b><div class="muet">11h00 · Pantin</div></div></div>
+      <div class="item"><div class="ini">E</div><div><b>EssilorLuxottica</b><div class="muet">16h30 · visio</div></div></div>
+      <div class="muet" style="margin:14px 0 8px 4px">Cette semaine</div>
+      <div class="item"><div class="ini">K</div><div><b>Kering Beauté</b><div class="muet">mer. 10h · 2e rendez-vous</div></div></div>
+      <div class="item"><div class="ini">C</div><div><b>Carrefour</b><div class="muet">jeu. 15h · Massy</div></div></div>
+      <div class="ecouter"><div class="play">▶</div><div style="flex:1"><div>Écouter ma fiche</div><div class="onde"></div></div><span>2 min</span></div>
+    </div>
+
+    <div>
+      <div class="carte">
+        <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:12px">
+          <div><span class="etiquette et-p">Premier rendez-vous · 11h00 · Pantin</span><h2 style="font-size:26px; margin:8px 0 2px">Hermès</h2><div class="muet">Claire Vasseur, directrice achats emballage · Maroquinerie, parfums, beauté</div></div>
+          <button class="btn btn-p">Lire la fiche complète</button>
+        </div>
+        <div class="etapes" style="margin-top:16px">
+          <div class="etape faite"><b>Lead</b>signal repéré</div>
+          <div class="etape faite"><b>Rendez-vous obtenu</b>le 02/10</div>
+          <div class="etape ici"><b>Découverte</b>aujourd'hui</div>
+          <div class="etape"><b>Qualifié</b>13 critères</div>
+        </div>
+        <div style="display:flex; justify-content:space-between; align-items:baseline"><h2 style="margin-bottom:6px">Ce qu'il faut obtenir aujourd'hui</h2><span class="muet">3 sur 7 déjà connus</span></div>
+        <div class="crit">
+          <div class="c"><span class="dot ok">✓</span>Situation<span class="quand">presse</span></div>
+          <div class="c"><span class="dot vise"></span>Problème réel<span class="quand">à obtenir</span></div>
+          <div class="c"><span class="dot vise"></span>Impact chiffré<span class="quand">à obtenir</span></div>
+          <div class="c"><span class="dot part"></span>Objectif et gain attendu<span class="quand">partiel</span></div>
+          <div class="c"><span class="dot ok">✓</span>Urgence et échéance<span class="quand">presse</span></div>
+          <div class="c"><span class="dot vise"></span>Priorité<span class="quand">à obtenir</span></div>
+          <div class="c"><span class="dot ok">✓</span>Fournisseur en place<span class="quand">appel du 02/10</span></div>
+          <div class="c"><span class="dot vise"></span>Décideur (à ébaucher)<span class="quand">à obtenir</span></div>
+        </div>
+        <p class="muet" style="margin:8px 0 0">+ 5 critères pour les rendez-vous suivants : processus de décision, champion, budget, critères de choix, processus d'achat.</p>
+      </div>
+
+      <div class="deux">
+        <div class="carte">
+          <h2>Pourquoi eux, pourquoi maintenant</h2>
+          <div class="muet">Le signal</div>
+          <p style="margin:4px 0 0">Nouvel atelier de maroquinerie annoncé, mise en service prévue au printemps.</p>
+          <div class="source">Exemple de source · Presse régionale · date</div>
+          <div class="muet" style="margin-top:12px">L'accroche à dire</div>
+          <div class="citation">« Vous ouvrez un nouvel atelier au printemps. Comment vous préparez la montée en volume côté emballage ? »</div>
+        </div>
+        <div class="carte">
+          <h2>Trouver le vrai problème</h2>
+          <div class="muet">Douleur probable n°1 : délais des coffrets en période de lancement</div>
+          <div class="entonnoir">
+            <div class="ent"><small>Ouverte large</small>Comment se passe un lancement côté emballage chez vous ?</div>
+            <div class="ent"><small>Ouverte ciblée</small>Qu'est-ce qui coince le plus quand les volumes montent ?</div>
+            <div class="ent"><small>Chiffrer</small>Un coffret en retard, ça vous coûte combien de jours de vente ?</div>
+            <div class="ent"><small>Valider</small>C'est plutôt le délai ou la qualité qui vous inquiète ?</div>
+            <div class="ent"><small>Reformuler</small>« Si je vous suis, le vrai sujet c'est... »</div>
+          </div>
+          <p class="muet" style="margin:8px 0 0">Douleurs n°2 et n°3 dans la fiche complète</p>
+        </div>
+      </div>
+
+      <div class="deux">
+        <div class="carte">
+          <h2>Objections probables</h2>
+          <div style="font-size:13px; display:flex; flex-direction:column; gap:8px">
+            <div><b>« On a déjà un fournisseur »</b><div class="muet">Accepter, puis : « Quand vous l'avez choisi, quel résultat vous visiez ? »</div></div>
+            <div><b>« Vous êtes trop petits pour nous »</b><div class="muet">Isoler : « C'est la capacité qui vous inquiète, ou autre chose ? »</div></div>
+            <div><b>« Envoyez-moi une plaquette »</b><div class="muet">Explorer : « Volontiers. Qu'est-ce que vous aimeriez y trouver ? »</div></div>
+          </div>
+          <p class="muet" style="margin:8px 0 0">+ 2 autres et les questions miroir dans la fiche complète</p>
+        </div>
+        <div class="carte">
+          <h2>Conclure</h2>
+          <div class="citation">« Je vous propose qu'on se revoie avec votre responsable qualité. Mardi 10h ou jeudi 15h ? »</div>
+          <div class="muet" style="margin-top:4px">Puis se taire. Les deux créneaux sont libres dans votre agenda :</div>
+          <div class="creneaux">
+            <div class="creneau"><b>Mar. 27</b>10h00</div>
+            <div class="creneau"><b>Jeu. 29</b>15h00</div>
+          </div>
+          <div class="muet" style="margin-top:8px">Titre de l'invitation : « Sécuriser les coffrets des lancements 2027 »</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3. PROSPECTION : WORKFLOW -->
+<section class="ecran" id="pwf">
+  <h1>Workflow · Prospection</h1>
+  <p class="sous">La fiche d'un premier rendez-vous se construit brique par brique. Chaque recherche a son propre agent.</p>
+  <div class="wf">
+    <div class="carte">
+      <h2>Paramètres de la préparation</h2>
+      <div class="muet" style="margin-bottom:6px">Rendez-vous</div>
+      <div class="brique" style="margin-bottom:12px"><b>Hermès · lundi 11h00</b><span>Claire Vasseur, directrice achats emballage</span></div>
+      <div class="reglage">Signal déclencheur<span class="inter"></span></div>
+      <div class="reglage">LinkedIn de l'entreprise<span class="inter"></span></div>
+      <div class="reglage">Presse : résultats<span class="inter"></span></div>
+      <div class="reglage">Presse : dirigeants<span class="inter"></span></div>
+      <div class="reglage">Presse : usines, RSE<span class="inter"></span></div>
+      <div class="reglage">Fournisseur en place et concurrence<span class="inter"></span></div>
+      <div class="reglage">Style de l'interlocuteur<span class="inter off"></span></div>
+      <div class="reglage">Version à écouter<span class="inter"></span></div>
+      <button class="btn btn-p" style="width:100%; justify-content:center; margin-top:14px">Générer la fiche</button>
+    </div>
+    <div class="carte">
+      <div class="schema">
+        <div class="col">
+          <div class="brique ok"><b>Déclenchement</b><span>Lancée à 9h45</span></div>
+          <div class="brique ok"><b>CRM de prospection</b><span>Étape, critères connus</span></div>
+        </div>
+        <div class="col">
+          <div class="brique ok nouveau"><b>Signal déclencheur</b><span>Nouvel atelier</span></div>
+          <div class="brique ok"><b>LinkedIn de l'entreprise</b><span>8 publications</span></div>
+          <div class="brique ok"><b>Bourse</b><span>Cotée</span></div>
+          <div class="brique cours"><b>Presse : résultats</b><span>3 recherches</span></div>
+          <div class="brique cours"><b>Presse : dirigeants</b><span>2 recherches</span></div>
+          <div class="brique ok"><b>Presse : usines, RSE</b><span>4 faits retenus</span></div>
+          <div class="brique cours nouveau"><b>Fournisseur et concurrence</b><span>en cours</span></div>
+          <div class="brique att vigilance"><b>Style de l'interlocuteur</b><span>désactivé</span></div>
+        </div>
+        <div class="col">
+          <div class="brique att"><b>Sources rassemblées</b><span>en attente</span></div>
+          <div class="brique att nouveau"><b>Douleurs probables</b><span>3 hypothèses</span></div>
+          <div class="brique att nouveau"><b>Questions en entonnoir</b><span>par douleur</span></div>
+          <div class="brique att nouveau"><b>Objections et miroirs</b><span>5 + 3</span></div>
+          <div class="brique att nouveau"><b>Conclusion et créneaux</b><span>lus dans l'agenda</span></div>
+        </div>
+        <div class="col">
+          <div class="brique att"><b>Fiche écrite</b><span>1 page</span></div>
+          <div class="brique att"><b>Version à écouter</b><span>2 minutes</span></div>
+        </div>
+        <div class="col">
+          <div class="brique att"><b>CRM de prospection</b><span>« Fiche préparée »</span></div>
+          <div class="brique att"><b>Envoi au téléphone</b><span>30 min avant</span></div>
+        </div>
+      </div>
+      <div class="alerte"><b>Style de l'interlocuteur : à décider.</b> Lire sur internet ce qu'une personne a publié pour deviner son caractère, c'est du profilage d'une personne réelle à partir de sources qu'elle n'a pas écrites pour ça. Proposition : brique désactivée par défaut. Si on l'active, elle ne lit que ce que la personne a publié elle-même (interviews, conférences), cite chaque source et rend un « indice à vérifier », jamais une couleur. La couleur ne se fixe qu'après le rendez-vous, à partir du ressenti dicté.</div>
+    </div>
+  </div>
+</section>
+
+<!-- 4. QUALIFIÉS (EXISTANT) -->
+<section class="ecran" id="qjour">
+  <h1>Ma journée</h1>
+  <p class="sous">L'interface actuelle, inchangée : les clients déjà dans le CRM, leurs fiches et leur Workflow.</p>
+  <div class="q-grille">
+    <div class="q-carte"><div class="haut"><div class="h">9h30</div>Bonduelle</div><div class="bas">Nathalie Dubreuil, responsable achats<br><span class="muet">Renouvellement de l'accord-cadre étiquettes · fiche prête</span></div></div>
+    <div class="q-carte"><div class="haut"><div class="h">14h00</div>Lesaffre</div><div class="bas">Philippe Delattre, directeur industriel<br><span class="muet">Démonstration de l'équipement · fiche à 13h15</span></div></div>
+    <div class="q-carte"><div class="haut" style="background:var(--marine)"><div class="h">17h00</div>Guerbet</div><div class="bas">Visio<br><span class="muet">Qualité et audit fournisseur · fiche à 16h15</span></div></div>
+  </div>
+  <p class="fleche">Mode Qualifiés : tout reste comme aujourd'hui (Accueil, Ma journée, Workflow, Mon compte).</p>
+</section>
+
+</main>
+
+<script>
+const ONGLETS = {
+  tous: [['dash', 'Tableau de bord']],
+  qualifie: [['dash', 'Tableau de bord'], ['qjour', 'Ma journée'], ['qwf', 'Workflow']],
+  prospection: [['dash', 'Tableau de bord'], ['pjour', 'Premiers rendez-vous'], ['pwf', 'Workflow']],
+}
+const MODE_ECRAN = { dash: null, pjour: 'prospection', pwf: 'prospection', qjour: 'qualifie', qwf: 'qualifie' }
+let mode = 'tous', ecran = 'dash'
+
+function placerCurseur() {
+  const b = document.querySelector('.bascule button.on'), c = document.querySelector('.bascule .curseur')
+  c.style.left = b.offsetLeft + 'px'; c.style.width = b.offsetWidth + 'px'
+}
+function rendre() {
+  document.body.classList.toggle('prospection', mode === 'prospection')
+  document.querySelectorAll('.bascule button').forEach(b => b.classList.toggle('on', b.dataset.mode === mode))
+  placerCurseur()
+  const nav = document.getElementById('onglets')
+  nav.innerHTML = ONGLETS[mode].map(([id, l]) => `<button data-aller="${id}" class="${id === ecran || (id === 'qwf' && ecran === 'qjour' && false) ? 'on' : ''}">${l}</button>`).join('')
+  document.querySelectorAll('.ecran').forEach(s => s.classList.toggle('on', s.id === (ecran === 'qwf' ? 'qjour' : ecran)))
+  document.querySelectorAll('.note-maquette button').forEach(b => b.classList.toggle('on', b.dataset.aller === ecran))
+  window.scrollTo({ top: 0 })
+}
+function aller(id) {
+  ecran = id
+  const m = MODE_ECRAN[id]
+  if (m) mode = m
+  else if (id === 'dash') mode = 'tous'
+  rendre()
+}
+document.addEventListener('click', e => {
+  const a = e.target.closest('[data-aller]'); if (a) { aller(a.dataset.aller); return }
+  const m = e.target.closest('[data-mode]')
+  if (m) { mode = m.dataset.mode; ecran = mode === 'prospection' ? 'pjour' : mode === 'qualifie' ? 'qjour' : 'dash'; rendre() }
+})
+window.addEventListener('resize', placerCurseur)
+document.fonts.ready.then(rendre)
+if (location.hash.slice(1) in MODE_ECRAN) aller(location.hash.slice(1)); else rendre()
+</script>
+</body>
+</html>

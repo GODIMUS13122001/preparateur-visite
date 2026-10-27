@@ -1,0 +1,228 @@
+@import "tailwindcss";
+
+@theme {
+  --color-creme: #FAF9F6;
+  --color-encre: #120A29;
+  --color-texte: #030303;
+  --color-violet: #5723F3;
+  --color-violet-vif: #8257F5;
+  --color-violet-profond: #31148A;
+  /* aplats décoratifs (halos, taches de couleur) : en Prospection, le corail ; jamais pour du texte blanc */
+  --color-deco: #5723F3;
+  --color-lavande: #AC8FF9;
+  --color-lilas: #D8CCFB;
+  --color-voile: #F3EFFE;
+  --color-ardoise: #706A81;
+  /* gris secondaire : assez foncé pour être lisible sur fond clair (4,7:1 sur blanc) */
+  --color-brume: #75708A;
+  --color-nuage: #ECE8F0;
+  --color-alerte: #B4530A;
+  --color-alerte-fond: #FDF1E6;
+  --color-ok: #17803D;
+  --color-ok-fond: #EAF7EF;
+  --color-erreur: #C62F3B;
+  --color-erreur-fond: #FCEDEE;
+  /* Typographie de la charte : Fraunces pour les titres et les grands chiffres, Geist pour le texte */
+  --font-sans: "Geist Variable", system-ui, -apple-system, "Helvetica Neue", sans-serif;
+  --font-serif: "Fraunces Variable", "Times New Roman", Georgia, serif;
+  /* ombres teintées : elles suivent la couleur d'accent du mode */
+  --shadow-carte: 0 20px 40px -32px color-mix(in srgb, var(--color-violet-profond) 40%, transparent);
+  --shadow-carte-survol: 0 18px 40px -28px var(--color-violet-profond);
+  --shadow-panneau: 0 30px 60px -40px color-mix(in srgb, var(--color-violet-profond) 35%, transparent);
+  --shadow-verre: 0 24px 50px -38px color-mix(in srgb, var(--color-violet-profond) 40%, transparent);
+  --shadow-halo: 0 0 0 4px var(--color-voile), 0 18px 40px -24px var(--color-violet);
+  --shadow-noeud: 0 0 0 4px var(--color-voile), 0 12px 30px -14px var(--color-violet);
+  --shadow-bouton: 0 10px 24px -12px var(--color-violet);
+  --shadow-bouton-petit: 0 8px 20px -10px var(--color-violet);
+  --shadow-lecture: 0 0 0 6px color-mix(in srgb, var(--color-violet-vif) 25%, transparent);
+  --shadow-icone: 0 0 40px -6px var(--color-violet);
+  --font-mono: "Geist Mono Variable", ui-monospace, Menlo, monospace;
+}
+
+html, body, #root { min-height: 100%; }
+/* Profondeur : fond crème voilé de lilas et de rose, avec un grain de papier.
+   Fluidité : les dégradés et le grain sont deux calques fixes, peints une seule fois (pas de background-attachment: fixed,
+   qui repeint tout l'écran à chaque défilement, ni de mélange plein écran, que le navigateur recompose à chaque image). */
+body { color: var(--color-texte); font-family: var(--font-sans); -webkit-font-smoothing: antialiased; background-color: #F7F5F2; }
+body::before, body::after { content: ""; position: fixed; inset: 0; z-index: 0; pointer-events: none; transform: translateZ(0); }
+body::before {
+  background-image:
+    radial-gradient(1100px 720px at 88% -8%, color-mix(in srgb, var(--color-lavande) 38%, transparent), transparent 62%),
+    radial-gradient(900px 640px at 62% 38%, color-mix(in srgb, var(--color-lilas) 40%, transparent), transparent 66%),
+    radial-gradient(1000px 700px at -8% 108%, rgba(240, 196, 222, 0.38), transparent 62%),
+    radial-gradient(700px 500px at 18% 30%, rgba(255, 255, 255, 0.55), transparent 70%);
+}
+/* grain de papier : même rendu que l'ancien mélange « multiply » (couleur proche, opacité identique), sans mélange */
+body::after {
+  opacity: 0.4;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.45 0 0 0 0 0.40 0 0 0 0 0.52 0 0 0 0.55 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E");
+}
+#root { position: relative; z-index: 1; }
+
+/* Titres en Fraunces */
+h1, h2, h3, h4, .titre { font-family: var(--font-serif); font-weight: 560; letter-spacing: -0.015em; font-optical-sizing: auto; }
+.chiffre { font-family: var(--font-serif); font-variant-numeric: lining-nums tabular-nums; }
+
+/* Éléments du navigateur aux couleurs de la marque */
+::selection { background: var(--color-lilas); color: #120A29; }
+:focus-visible { outline: 2px solid var(--color-violet); outline-offset: 2px; }
+input, textarea, select { caret-color: var(--color-violet); }
+
+/* Barre de lecture audio (curseur accessible au clavier) */
+.curseur-audio { background: linear-gradient(to right, var(--color-lavande) 0, #FFFFFF var(--p), rgba(255,255,255,.15) var(--p)); }
+.curseur-audio::-webkit-slider-thumb { appearance: none; width: 14px; height: 14px; border-radius: 9999px; background: #fff; box-shadow: 0 0 0 4px color-mix(in srgb, var(--color-lavande) 35%, transparent); }
+.curseur-audio:disabled { opacity: .5; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-iteration-count: 1 !important; scroll-behavior: auto !important; }
+  .animate-ping, .animate-pulse, .animate-spin { animation: none !important; }
+  * { transition-duration: 120ms !important; }
+}
+
+@keyframes flux { to { stroke-dashoffset: -24; } }
+@keyframes reflet { 0%, 55% { transform: translateX(-100%); } 100% { transform: translateX(100%); } }
+
+/* Curseurs sur fond sombre (compteur de consommation) */
+.curseur-clair { appearance: none; height: 6px; border-radius: 9999px; background: rgba(255,255,255,.15); accent-color: var(--color-lavande); cursor: pointer; }
+.curseur-clair::-webkit-slider-thumb { appearance: none; width: 16px; height: 16px; border-radius: 9999px; background: #fff; box-shadow: 0 0 0 4px color-mix(in srgb, var(--color-lavande) 35%, transparent); transition: transform 150ms cubic-bezier(0.23,1,0.32,1); }
+@media (hover: hover) and (pointer: fine) { .curseur-clair::-webkit-slider-thumb:hover { transform: scale(1.15); } }
+
+/* Retour au clic : chaque bouton s'enfonce légèrement (propriété scale, ne touche pas aux transform des animations) */
+:where(button, a[role="button"], [role="button"]):not(:disabled) { transition-property: color, background-color, border-color, box-shadow, opacity, scale; transition-duration: 160ms; transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1); }
+:where(button, [role="button"]):not(:disabled):active { scale: 0.97; }
+
+/* ==================================================================== mode sombre (bouton en haut à droite) */
+:root { --surface: 255 255 255; }
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --surface: 27 21 48;
+  --color-creme: #171128;
+  --color-texte: #ECE8F6;
+  --color-voile: #2A1F55;
+  --color-ardoise: #ABA4C2;
+  --color-brume: #9089A8;
+  --color-nuage: #2D2645;
+  --color-alerte: #F2A65E;
+  --color-alerte-fond: #2E1E0E;
+  --color-ok: #5BD88A;
+  --color-ok-fond: #13291D;
+  --color-erreur: #FF7D88;
+  --color-erreur-fond: #34141B;
+}
+:root[data-theme="dark"] body {
+  background-color: #0F0B1D;
+}
+:root[data-theme="dark"] body::before {
+  background-image:
+    radial-gradient(1100px 720px at 88% -8%, color-mix(in srgb, var(--color-violet) 22%, transparent), transparent 62%),
+    radial-gradient(1000px 700px at -8% 108%, color-mix(in srgb, var(--color-violet-profond) 32%, transparent), transparent 62%);
+}
+:root[data-theme="dark"] body::after { opacity: 0.12; }
+/* surfaces blanches (cartes, verre) : surface sombre ; texte encre : clair. Les cartes marine restent plus sombres que les autres. */
+:root[data-theme="dark"] .bg-white { background-color: rgb(var(--surface)); }
+:root[data-theme="dark"] .bg-white\/45 { background-color: rgb(var(--surface) / 0.55); }
+:root[data-theme="dark"] .bg-white\/60 { background-color: rgb(var(--surface) / 0.65); }
+:root[data-theme="dark"] .bg-white\/70 { background-color: rgb(var(--surface) / 0.75); }
+:root[data-theme="dark"] .bg-white\/80 { background-color: rgb(var(--surface) / 0.85); }
+:root[data-theme="dark"] .bg-white\/85 { background-color: rgb(var(--surface) / 0.9); }
+:root[data-theme="dark"] .bg-white\/90 { background-color: rgb(var(--surface) / 0.94); }
+:root[data-theme="dark"] .bg-white\/55 { background-color: rgb(var(--surface) / 0.6); }
+:root[data-theme="dark"] .hover\:bg-white:hover { background-color: rgb(var(--surface)); }
+/* violet profond (textes sur fond voile) : clair en sombre, sinon 1,1:1 */
+:root[data-theme="dark"] .text-violet-profond { color: #D8CCFB; }
+:root[data-mode="prospection"][data-theme="dark"] .text-violet-profond { color: #F9D2C4; }
+:root[data-theme="dark"] .border-white, :root[data-theme="dark"] .border-white\/60,
+:root[data-theme="dark"] .border-white\/70, :root[data-theme="dark"] .border-white\/80 { border-color: rgb(255 255 255 / 0.08); }
+:root[data-theme="dark"] .ring-white { --tw-ring-color: rgb(var(--surface)); }
+:root[data-theme="dark"] .ring-white\/80 { --tw-ring-color: rgb(255 255 255 / 0.1); }
+:root[data-theme="dark"] .ring-offset-white { --tw-ring-offset-color: rgb(var(--surface)); }
+:root[data-theme="dark"] .bg-encre { background-color: #08051A; }
+:root[data-theme="dark"] .text-encre { color: #F1EDFB; }
+:root[data-theme="dark"] .text-violet { color: #B39BFF; }
+:root[data-theme="dark"] .ring-encre, :root[data-theme="dark"] .ring-encre\/5,
+:root[data-theme="dark"] .ring-encre\/10, :root[data-theme="dark"] .ring-encre\/15 { --tw-ring-color: rgb(255 255 255 / 0.1); }
+:root[data-theme="dark"] .border-encre { border-color: #F1EDFB; }
+/* logo : noir en clair, blanc en sombre */
+.logo-sombre { display: none; }
+:root[data-theme="dark"] .logo-clair { display: none; }
+:root[data-theme="dark"] .logo-sombre { display: block; }
+::view-transition-old(root), ::view-transition-new(root) { animation: none; mix-blend-mode: normal; }
+
+/* ==================================================================== espace Prospection (bouton à droite du titre)
+   Même interface que les clients qualifiés, l'accent passe du violet au corail : on voit tout de suite qu'on prospecte. */
+:root[data-mode="prospection"] {
+  /* texte blanc sur cet accent : 5:1 (AA) ; le corail #D9482B reste réservé aux aplats décoratifs (--color-deco) */
+  --color-violet: #C23A1E;
+  --color-violet-vif: #E0542F;
+  --color-violet-profond: #8F2A15;
+  --color-deco: #D9482B;
+  --color-lavande: #F3A389;
+  --color-lilas: #F9D2C4;
+  --color-voile: #FDEFE9;
+  /* les alertes passent à l'ambre : elles ne se confondent plus avec l'accent */
+  --color-alerte: #8A5A00;
+  --color-alerte-fond: #FFF4D6;
+  /* l'erreur passe à un cramoisi plus froid : elle ne se confond plus avec le corail (6,9:1 sur blanc) */
+  --color-erreur: #A3122A;
+  --color-erreur-fond: #FBE9EC;
+}
+:root[data-mode="prospection"][data-theme="dark"] {
+  --color-voile: #3A2018;
+  --color-alerte: #F5C451;
+  --color-alerte-fond: #2E2410;
+  --color-erreur: #FF8FB1;
+  --color-erreur-fond: #36121F;
+}
+:root[data-mode="prospection"][data-theme="dark"] .text-violet { color: #FF9E80; }
+
+/* Halos décoratifs : un dégradé radial statique remplace les grands flous (filter: blur de 64 px), même esprit, sans calcul de flou */
+.halo { border-radius: 9999px; background: radial-gradient(closest-side, var(--halo) 0%, color-mix(in srgb, var(--halo) 55%, transparent) 45%, transparent 100%); }
+
+/* Animations mises en pause quand leur zone n'est pas à l'écran (classe posée par un IntersectionObserver) */
+.hors-ecran, .hors-ecran * { animation-play-state: paused !important; }
+
+/* Ruban des jours : le dernier jour s'efface doucement au lieu d'être coupé net par la flèche */
+.ruban-fondu { mask-image: linear-gradient(to right, transparent 0, #000 16px, #000 calc(100% - 24px), transparent); }
+
+/* ==================================================================== Mon agenda
+   Couleurs fixes, indépendantes du bouton Qualifiés / Prospection : violet = client qualifié, corail = prospect,
+   gris pointillé = ajouté à l'agenda mais absent du CRM. */
+:root {
+  --ag-qualifie: #5723F3; --ag-qualifie-texte: #5723F3;
+  --ag-prospect: #D9482B; --ag-prospect-texte: #C23A1E;
+  --ag-agenda: #8A849A; --ag-agenda-texte: #706A81;
+  --ag-encre: #120A29;
+}
+:root[data-theme="dark"] {
+  --ag-qualifie: #8B66FF; --ag-qualifie-texte: #BCA6FF;
+  --ag-prospect: #E8603F; --ag-prospect-texte: #FFA285;
+  --ag-agenda: #8F88A8; --ag-agenda-texte: #ABA4C2;
+  --ag-encre: #F1EDFB;
+}
+.ag-qualifie { --c: var(--ag-qualifie); --ct: var(--ag-qualifie-texte); }
+.ag-prospect { --c: var(--ag-prospect); --ct: var(--ag-prospect-texte); }
+.ag-agenda   { --c: var(--ag-agenda);   --ct: var(--ag-agenda-texte); }
+.ag-fond { background-color: color-mix(in srgb, var(--c) 9%, rgb(var(--surface))); }
+:root[data-theme="dark"] .ag-fond { background-color: color-mix(in srgb, var(--c) 18%, rgb(var(--surface))); }
+@media (hover: hover) and (pointer: fine) {
+  .ag-fond:hover { background-color: color-mix(in srgb, var(--c) 15%, rgb(var(--surface))); }
+  :root[data-theme="dark"] .ag-fond:hover { background-color: color-mix(in srgb, var(--c) 26%, rgb(var(--surface))); }
+}
+.ag-agenda.ag-fond { background-color: rgb(var(--surface) / 0.85); border: 1.5px dashed var(--ag-agenda); }
+.ag-barre { box-shadow: inset 3px 0 0 var(--c); }
+.ag-agenda.ag-barre { box-shadow: none; }
+.ag-texte { color: var(--ct); }
+.ag-point { background-color: var(--c); }
+.ag-point-agenda { border: 1.5px dashed var(--ag-agenda); background: transparent; }
+.ag-pastille-jour { background-color: var(--ag-encre); color: rgb(var(--surface)); }
+.ag-maintenant { background-color: var(--ag-encre); }
+.ag-actif { outline: 2px solid var(--c); outline-offset: 1px; }
+@keyframes ag-nouveau {
+  0% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--c) 60%, transparent); }
+  70%, 100% { box-shadow: 0 0 0 10px color-mix(in srgb, var(--c) 0%, transparent); }
+}
+.ag-nouveau { animation: ag-nouveau 1.3s cubic-bezier(0.23, 1, 0.32, 1) 3; }
+.ag-qualifie { --cb: #5723F3; }
+.ag-prospect { --cb: #C23A1E; }
+.ag-agenda   { --cb: #120A29; }
+.ag-bouton { background-color: var(--cb); }
+[data-checked="true"] .ag-point { background-color: #FFFFFF; }

@@ -1,0 +1,13 @@
+{
+  "statut": "ok",
+  "ticker": "BON.PA",
+  "source": "Yahoo Finance",
+  "date_cours": "2026-10-15",
+  "devise": "EUR",
+  "dernier_cours": 8.35,
+  "variation_1_mois_pct": 0.4,
+  "variation_3_mois_pct": -0.1,
+  "variation_12_mois_pct": -7.6,
+  "plus_haut_52_semaines": 11.36,
+  "plus_bas_52_semaines": 7.35
+}

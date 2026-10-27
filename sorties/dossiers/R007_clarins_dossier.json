@@ -1,0 +1,197 @@
+{
+  "meta": {
+    "source": "Export_CRM_Orvane_demo_20261009.xlsx",
+    "date_reference": "2026-10-09",
+    "genere_le": "2026-10-13T15:27:58",
+    "regle": "Indicateurs recalculés à partir des colonnes de saisie (aucune valeur de formule lue)"
+  },
+  "rendez_vous": {
+    "id": "R007",
+    "date": "2026-10-14",
+    "heure_debut": "11:00",
+    "heure_fin": "11:45",
+    "type": "Visio",
+    "lieu": "Microsoft Teams",
+    "objet": "Revue des échantillons et de la fiche RSE",
+    "statut": "Planifié",
+    "contact": {
+      "id": "C009",
+      "nom": "Léa Moreau",
+      "poste": "Responsable achats packaging"
+    },
+    "commercial": {
+      "id": "U002",
+      "nom": "Julien Morel"
+    },
+    "transaction_liee": {
+      "id": "T010",
+      "nom": "Clarins - Référencement second fournisseur étuis"
+    },
+    "brief_prepare": "Oui"
+  },
+  "entreprise": {
+    "id": "E005",
+    "nom": "Clarins",
+    "site_web": "https://www.clarins.com",
+    "description": "Groupe familial de cosmétiques de soin et de maquillage.",
+    "secteur": "Grande consommation",
+    "sous_secteur": "Cosmétiques de soin",
+    "segment": "Grand compte",
+    "effectif": "5 000 - 9 999",
+    "ca_annuel_tranche": "1 - 10 Md€",
+    "adresse": "9 rue du Commandant Pilot, 92200 Neuilly-sur-Seine",
+    "region": "Île-de-France",
+    "groupe": "Groupe Clarins",
+    "cotee": "Non",
+    "code_bourse": null,
+    "proprietaire": "Julien Morel",
+    "phase_cycle_vie": "Opportunité",
+    "statut_compte": "En développement",
+    "client_depuis": null,
+    "potentiel_annuel": 300000,
+    "ca_12_mois": 0.0,
+    "ca_12_mois_precedents": 0.0,
+    "concurrent_principal": "Cartonnages Vauclair",
+    "conditions_paiement": "60 jours",
+    "contexte": "Demande entrante via le site web. Clarins cherche un second fournisseur d'étuis pour sécuriser ses approvisionnements.",
+    "enjeux": "Référencement comme second fournisseur d'étuis ; exigences fortes sur l'éco-conception et la traçabilité des fibres.",
+    "transactions_ouvertes": 1,
+    "pipeline_ouvert": 150000,
+    "tickets_ouverts": 0,
+    "date_derniere_activite": "2026-09-28",
+    "taux_couverture_potentiel": 0.0
+  },
+  "contacts": [
+    {
+      "id": "C009",
+      "nom": "Mme Léa Moreau",
+      "poste": "Responsable achats packaging",
+      "service": "Achats",
+      "niveau_decision": "Décideur",
+      "contact_cle": "Oui",
+      "canal_prefere": "Visio",
+      "notes": "Contact entrant via le site web. Cherche un second fournisseur d'étuis.",
+      "date_dernier_echange": "2026-09-28",
+      "interactions_12_mois": 5,
+      "interlocuteur_du_rdv": true
+    }
+  ],
+  "activites_recentes": [
+    {
+      "id": "A0242",
+      "date": "2026-09-28",
+      "type": "E-mail",
+      "contact": "Léa Moreau",
+      "objet": "Envoi du compte rendu de visite",
+      "contenu": "Envoi à Léa Moreau du compte rendu de la visite du 24/09/2026 et des prochaines étapes convenues.",
+      "resultat": "Neutre",
+      "transaction": "T010",
+      "prochaine_action": null,
+      "echeance": null
+    },
+    {
+      "id": "A0236",
+      "date": "2026-09-24",
+      "type": "Visite terrain",
+      "contact": "Léa Moreau",
+      "objet": "Compte rendu de visite",
+      "contenu": "Visite à Neuilly avec Léa Moreau. Clarins souhaite un second fournisseur d'étuis pour réduire sa dépendance. Points clés : certification des fibres, capacité de production en pic, prix cible inférieur d'environ 5 % au fournisseur actuel. Échantillons demandés pour mi-octobre.",
+      "resultat": "Positif",
+      "transaction": "T010",
+      "prochaine_action": "Envoyer les échantillons et la fiche RSE",
+      "echeance": "2026-10-14"
+    },
+    {
+      "id": "A0181",
+      "date": "2026-07-23",
+      "type": "Réunion visio",
+      "contact": "Léa Moreau",
+      "objet": "Cadrage du besoin",
+      "contenu": "Réunion Teams avec Léa Moreau pour cadrer le besoin concernant le référencement en second fournisseur d'étuis. Liste des prérequis techniques partagée.",
+      "resultat": "Positif",
+      "transaction": null,
+      "prochaine_action": null,
+      "echeance": null
+    },
+    {
+      "id": "A0117",
+      "date": "2026-03-05",
+      "type": "Note",
+      "contact": "Léa Moreau",
+      "objet": "Préparation négociation",
+      "contenu": "Note interne : préparer un comparatif de prix face à Cartonnages Vauclair avant la prochaine négociation.",
+      "resultat": "Neutre",
+      "transaction": null,
+      "prochaine_action": null,
+      "echeance": null
+    },
+    {
+      "id": "A0106",
+      "date": "2026-01-19",
+      "type": "E-mail",
+      "contact": "Léa Moreau",
+      "objet": "Envoi du planning",
+      "contenu": "Envoi à Léa Moreau du planning prévisionnel et des points ouverts concernant le référencement en second fournisseur d'étuis.",
+      "resultat": "Neutre",
+      "transaction": null,
+      "prochaine_action": null,
+      "echeance": null
+    }
+  ],
+  "dernier_compte_rendu_visite": {
+    "id": "A0236",
+    "date": "2026-09-24",
+    "contact": "Léa Moreau",
+    "objet": "Compte rendu de visite",
+    "texte_integral": "Visite à Neuilly avec Léa Moreau. Clarins souhaite un second fournisseur d'étuis pour réduire sa dépendance. Points clés : certification des fibres, capacité de production en pic, prix cible inférieur d'environ 5 % au fournisseur actuel. Échantillons demandés pour mi-octobre.",
+    "autres_participants": null
+  },
+  "transactions": [
+    {
+      "id": "T010",
+      "nom": "Clarins - Référencement second fournisseur étuis",
+      "phase": "Qualifié pour achat",
+      "statut": "Ouverte",
+      "probabilite": 0.4,
+      "montant": 150000,
+      "montant_pondere": 60000.0,
+      "type": "Nouvelle affaire",
+      "produit": "Emballages éco-conçus mono-matériau",
+      "contact_principal": "Léa Moreau",
+      "date_creation": "2026-01-15",
+      "cloture_prevue": "2027-03-15",
+      "cloture_effective": null,
+      "prochaine_etape": "Envoyer les échantillons et la fiche RSE",
+      "concurrent": "Cartonnages Vauclair",
+      "motif_perte": null,
+      "liee_au_rdv": true
+    }
+  ],
+  "tickets": [],
+  "commandes": {
+    "synthese": {
+      "nombre": 0,
+      "ca_12_mois": 0.0,
+      "ca_par_produit": {},
+      "livrees_avec_date": 0,
+      "en_retard": 0,
+      "retard_max_jours": 0,
+      "retard_moyen_jours_sur_retards": 0,
+      "non_livrees": []
+    },
+    "detail": []
+  },
+  "prochains_rendez_vous": [
+    {
+      "id": "R007",
+      "date": "2026-10-14",
+      "heure": "11:00",
+      "type": "Visio",
+      "objet": "Revue des échantillons et de la fiche RSE",
+      "contact": "Léa Moreau",
+      "statut": "Planifié",
+      "est_ce_rdv": true
+    }
+  ],
+  "donnees_manquantes": []
+}

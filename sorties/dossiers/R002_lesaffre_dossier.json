@@ -1,0 +1,389 @@
+{
+  "meta": {
+    "source": "Export_CRM_Orvane_demo_20261009.xlsx",
+    "date_reference": "2026-10-09",
+    "genere_le": "2026-10-14T17:29:07",
+    "regle": "Indicateurs recalculés à partir des colonnes de saisie (aucune valeur de formule lue)"
+  },
+  "rendez_vous": {
+    "id": "R002",
+    "date": "2026-10-12",
+    "heure_debut": "14:00",
+    "heure_fin": "16:00",
+    "type": "Visite sur site",
+    "lieu": "Lesaffre - Marcq-en-Barœul",
+    "objet": "Démonstration de l'encartonneuse EC-200 et échange sur le chiffrage",
+    "statut": "Confirmé",
+    "contact": {
+      "id": "C004",
+      "nom": "Philippe Delattre",
+      "poste": "Directeur industriel"
+    },
+    "commercial": {
+      "id": "U002",
+      "nom": "Julien Morel"
+    },
+    "transaction_liee": {
+      "id": "T004",
+      "nom": "Lesaffre - Encartonneuse ligne levure sèche"
+    },
+    "brief_prepare": "Non"
+  },
+  "entreprise": {
+    "id": "E002",
+    "nom": "Lesaffre",
+    "site_web": "https://www.lesaffre.com",
+    "description": "Groupe familial, leader mondial des levures et ferments pour la panification, la nutrition, la santé et les biotechnologies.",
+    "secteur": "Grande consommation",
+    "sous_secteur": "Ingrédients et levures",
+    "segment": "Grand compte",
+    "effectif": "10 000 et plus",
+    "ca_annuel_tranche": "1 - 10 Md€",
+    "adresse": "137 rue Gabriel Péri, 59700 Marcq-en-Barœul",
+    "region": "Hauts-de-France",
+    "groupe": "Groupe Lesaffre",
+    "cotee": "Non",
+    "code_bourse": null,
+    "proprietaire": "Julien Morel",
+    "phase_cycle_vie": "Client",
+    "statut_compte": "Actif",
+    "client_depuis": "2022-11-15",
+    "potentiel_annuel": 380000,
+    "ca_12_mois": 226094.4,
+    "ca_12_mois_precedents": 218011.4,
+    "concurrent_principal": "Emballor Industries",
+    "conditions_paiement": "45 jours fin de mois",
+    "contexte": "Client sur les caisses carton et les étiquettes. Groupe familial en croissance qui investit dans de nouvelles capacités industrielles, en France comme à l'international. Relation construite avec le service achats ; l'arrivée d'un nouveau directeur industriel en 2026 ouvre la discussion sur l'automatisation des fins de ligne.",
+    "enjeux": "Automatiser la mise en carton d'une ligne de levure sèche ; réduire la pénibilité au poste de palettisation ; décision d'investissement attendue avant la clôture budgétaire de fin d'année.",
+    "transactions_ouvertes": 1,
+    "pipeline_ouvert": 148000,
+    "tickets_ouverts": 0,
+    "date_derniere_activite": "2026-10-06",
+    "taux_couverture_potentiel": 0.595
+  },
+  "contacts": [
+    {
+      "id": "C003",
+      "nom": "Mme Aurélie Vasseur",
+      "poste": "Acheteuse emballages et indirects",
+      "service": "Achats",
+      "niveau_decision": "Influenceur",
+      "contact_cle": "Oui",
+      "canal_prefere": "Téléphone",
+      "notes": "Gère les commandes récurrentes de caisses et d'étiquettes.",
+      "date_dernier_echange": "2026-05-18",
+      "interactions_12_mois": 5,
+      "interlocuteur_du_rdv": false
+    },
+    {
+      "id": "C004",
+      "nom": "M. Philippe Delattre",
+      "poste": "Directeur industriel",
+      "service": "Industrie",
+      "niveau_decision": "Décideur",
+      "contact_cle": "Oui",
+      "canal_prefere": "Visite",
+      "notes": "Arrivé en janvier 2026. Raisonne en coût total de possession et en sécurité des opérateurs.",
+      "date_dernier_echange": "2026-10-06",
+      "interactions_12_mois": 4,
+      "interlocuteur_du_rdv": true
+    }
+  ],
+  "activites_recentes": [
+    {
+      "id": "A0254",
+      "date": "2026-10-06",
+      "type": "Note",
+      "contact": "Philippe Delattre",
+      "objet": "Information concurrence",
+      "contenu": "Note interne : Emballor Industries aurait proposé un prix inférieur d'environ 10 %, sans contrat de maintenance inclus. Mettre en avant le coût total sur cinq ans.",
+      "resultat": "Neutre",
+      "transaction": "T004",
+      "prochaine_action": null,
+      "echeance": null
+    },
+    {
+      "id": "A0250",
+      "date": "2026-10-01",
+      "type": "Appel",
+      "contact": "Philippe Delattre",
+      "objet": "Confirmation de la démonstration",
+      "contenu": "Philippe Delattre confirme la démonstration du 12/10 à 14h00. Il viendra avec son responsable maintenance. Questions attendues : temps de changement de format, disponibilité des pièces détachées, délai d'installation.",
+      "resultat": "Positif",
+      "transaction": "T004",
+      "prochaine_action": "Préparer les réponses techniques et un chiffrage avec maintenance",
+      "echeance": "2026-10-12"
+    },
+    {
+      "id": "A0231",
+      "date": "2026-09-22",
+      "type": "E-mail",
+      "contact": "Philippe Delattre",
+      "objet": "Documentation EC-200",
+      "contenu": "Envoi à Philippe Delattre de la documentation de l'encartonneuse EC-200 et d'une référence client dans l'agroalimentaire.",
+      "resultat": "Neutre",
+      "transaction": "T004",
+      "prochaine_action": null,
+      "echeance": null
+    },
+    {
+      "id": "A0222",
+      "date": "2026-09-17",
+      "type": "Visite terrain",
+      "contact": "Philippe Delattre",
+      "objet": "Compte rendu de visite",
+      "contenu": "Premier rendez-vous avec Philippe Delattre, arrivé en janvier au poste de directeur industriel, en présence de l'acheteuse Aurélie Vasseur. Il veut automatiser la mise en carton d'une ligne de levure sèche d'ici la fin du premier semestre 2027, avec une cadence visée de 18 cartons par minute. Aurélie Vasseur rappelle que le budget d'investissement se décide en novembre. Un concurrent, Emballor Industries, a déjà fait une démonstration en août.",
+      "resultat": "Positif",
+      "transaction": "T004",
+      "prochaine_action": "Organiser la démonstration de l'encartonneuse EC-200",
+      "echeance": "2026-10-12"
+    },
+    {
+      "id": "A0144",
+      "date": "2026-05-18",
+      "type": "Visite terrain",
+      "contact": "Aurélie Vasseur",
+      "objet": "Revue d'activité semestrielle",
+      "contenu": "Revue d'activité semestrielle avec Aurélie Vasseur. Satisfaction globale sur la qualité ; demande de visibilité sur l'évolution des prix des matières. Échange sur l'automatisation de la mise en carton de la ligne levure sèche.",
+      "resultat": "Positif",
+      "transaction": null,
+      "prochaine_action": null,
+      "echeance": null
+    },
+    {
+      "id": "A0141",
+      "date": "2026-05-08",
+      "type": "Note",
+      "contact": "Aurélie Vasseur",
+      "objet": "Information organisation",
+      "contenu": "Note interne : Aurélie Vasseur a mentionné une réorganisation du service achats ; à surveiller.",
+      "resultat": "Neutre",
+      "transaction": null,
+      "prochaine_action": null,
+      "echeance": null
+    },
+    {
+      "id": "A0133",
+      "date": "2026-04-22",
+      "type": "Appel",
+      "contact": "Aurélie Vasseur",
+      "objet": "Relance proposition",
+      "contenu": "Appel de relance sur la dernière proposition. Aurélie Vasseur demande quelques jours pour consolider les retours internes.",
+      "resultat": "Positif",
+      "transaction": null,
+      "prochaine_action": "Envoyer le devis",
+      "echeance": "2026-05-06"
+    },
+    {
+      "id": "A0130",
+      "date": "2026-04-15",
+      "type": "Appel",
+      "contact": "Aurélie Vasseur",
+      "objet": "Ajustement de commande",
+      "contenu": "Appel de Aurélie Vasseur pour ajuster les quantités de la prochaine commande d'étiquettes adhésives haute définition. Modification prise en compte.",
+      "resultat": "Positif",
+      "transaction": null,
+      "prochaine_action": null,
+      "echeance": null
+    },
+    {
+      "id": "A0128",
+      "date": "2026-04-06",
+      "type": "Visite terrain",
+      "contact": "Aurélie Vasseur",
+      "objet": "Visite de suivi",
+      "contenu": "Visite de suivi avec Aurélie Vasseur. Revue des commandes en cours et des prévisions du trimestre sur les caisses carton ondulé personnalisées. Pas de difficulté particulière signalée. Aurélie Vasseur évoque l'automatisation de la mise en carton de la ligne levure sèche.",
+      "resultat": "Négatif",
+      "transaction": null,
+      "prochaine_action": null,
+      "echeance": null
+    },
+    {
+      "id": "A0009",
+      "date": "2025-02-07",
+      "type": "Appel",
+      "contact": "Aurélie Vasseur",
+      "objet": "Suivi de livraison",
+      "contenu": "Appel de suivi après la dernière livraison. Aurélie Vasseur confirme la conformité des lots reçus.",
+      "resultat": "À relancer",
+      "transaction": null,
+      "prochaine_action": "Planifier une visite de site",
+      "echeance": "2025-02-24"
+    }
+  ],
+  "dernier_compte_rendu_visite": {
+    "id": "A0222",
+    "date": "2026-09-17",
+    "contact": "Philippe Delattre",
+    "objet": "Compte rendu de visite",
+    "texte_integral": "Premier rendez-vous avec Philippe Delattre, arrivé en janvier au poste de directeur industriel, en présence de l'acheteuse Aurélie Vasseur. Il veut automatiser la mise en carton d'une ligne de levure sèche d'ici la fin du premier semestre 2027, avec une cadence visée de 18 cartons par minute. Aurélie Vasseur rappelle que le budget d'investissement se décide en novembre. Un concurrent, Emballor Industries, a déjà fait une démonstration en août.",
+    "autres_participants": "Aurélie Vasseur"
+  },
+  "transactions": [
+    {
+      "id": "T004",
+      "nom": "Lesaffre - Encartonneuse ligne levure sèche",
+      "phase": "Présentation planifiée",
+      "statut": "Ouverte",
+      "probabilite": 0.6,
+      "montant": 148000,
+      "montant_pondere": 88800.0,
+      "type": "Nouvelle affaire",
+      "produit": "Encartonneuse automatique EC-200",
+      "contact_principal": "Philippe Delattre",
+      "date_creation": "2026-09-17",
+      "cloture_prevue": "2026-12-15",
+      "cloture_effective": null,
+      "prochaine_etape": "Démonstration de l'EC-200 le 12/10, puis chiffrage avec maintenance",
+      "concurrent": "Emballor Industries",
+      "motif_perte": null,
+      "liee_au_rdv": true
+    },
+    {
+      "id": "T005",
+      "nom": "Lesaffre - Étiquettes logistiques 2026",
+      "phase": "Conclu gagné",
+      "statut": "Gagnée",
+      "probabilite": 1,
+      "montant": 38000,
+      "montant_pondere": 38000,
+      "type": "Affaire existante",
+      "produit": "Étiquettes adhésives haute définition",
+      "contact_principal": "Aurélie Vasseur",
+      "date_creation": "2025-11-03",
+      "cloture_prevue": "2026-01-20",
+      "cloture_effective": "2026-01-20",
+      "prochaine_etape": null,
+      "concurrent": null,
+      "motif_perte": null,
+      "liee_au_rdv": false
+    }
+  ],
+  "tickets": [],
+  "commandes": {
+    "synthese": {
+      "nombre": 7,
+      "ca_12_mois": 226094.4,
+      "ca_par_produit": {
+        "Étiquettes adhésives haute définition": 182272.8,
+        "Caisses carton ondulé personnalisées": 43821.6
+      },
+      "livrees_avec_date": 6,
+      "en_retard": 3,
+      "retard_max_jours": 3,
+      "retard_moyen_jours_sur_retards": 2.3,
+      "non_livrees": [
+        "CMD-2026-0292"
+      ]
+    },
+    "detail": [
+      {
+        "id": "CMD-2026-0292",
+        "date": "2026-10-05",
+        "produit": "Étiquettes adhésives haute définition",
+        "quantite": 136,
+        "remise": 0.07,
+        "montant_ht": 30355.2,
+        "livraison_prevue": "2026-10-19",
+        "livraison_effective": null,
+        "retard_jours": null,
+        "statut": "En cours de livraison"
+      },
+      {
+        "id": "CMD-2026-0274",
+        "date": "2026-08-24",
+        "produit": "Étiquettes adhésives haute définition",
+        "quantite": 103,
+        "remise": 0.06,
+        "montant_ht": 23236.8,
+        "livraison_prevue": "2026-09-07",
+        "livraison_effective": "2026-09-08",
+        "retard_jours": 1,
+        "statut": "Facturée"
+      },
+      {
+        "id": "CMD-2026-0247",
+        "date": "2026-06-08",
+        "produit": "Caisses carton ondulé personnalisées",
+        "quantite": 76,
+        "remise": 0.07,
+        "montant_ht": 43821.6,
+        "livraison_prevue": "2026-06-22",
+        "livraison_effective": "2026-06-25",
+        "retard_jours": 3,
+        "statut": "Facturée"
+      },
+      {
+        "id": "CMD-2026-0226",
+        "date": "2026-04-16",
+        "produit": "Étiquettes adhésives haute définition",
+        "quantite": 137,
+        "remise": 0.06,
+        "montant_ht": 30907.2,
+        "livraison_prevue": "2026-04-30",
+        "livraison_effective": "2026-04-30",
+        "retard_jours": 0,
+        "statut": "Facturée"
+      },
+      {
+        "id": "CMD-2026-0206",
+        "date": "2026-02-23",
+        "produit": "Étiquettes adhésives haute définition",
+        "quantite": 137,
+        "remise": 0.08,
+        "montant_ht": 30249.6,
+        "livraison_prevue": "2026-03-09",
+        "livraison_effective": "2026-03-09",
+        "retard_jours": 0,
+        "statut": "Facturée"
+      },
+      {
+        "id": "CMD-2025-0180",
+        "date": "2025-12-22",
+        "produit": "Étiquettes adhésives haute définition",
+        "quantite": 159,
+        "remise": 0.07,
+        "montant_ht": 35488.8,
+        "livraison_prevue": "2026-01-05",
+        "livraison_effective": "2026-01-08",
+        "retard_jours": 3,
+        "statut": "Facturée"
+      },
+      {
+        "id": "CMD-2025-0158",
+        "date": "2025-10-27",
+        "produit": "Étiquettes adhésives haute définition",
+        "quantite": 142,
+        "remise": 0.06,
+        "montant_ht": 32035.2,
+        "livraison_prevue": "2025-11-10",
+        "livraison_effective": "2025-11-10",
+        "retard_jours": 0,
+        "statut": "Facturée"
+      }
+    ]
+  },
+  "prochains_rendez_vous": [
+    {
+      "id": "R002",
+      "date": "2026-10-12",
+      "heure": "14:00",
+      "type": "Visite sur site",
+      "objet": "Démonstration de l'encartonneuse EC-200 et échange sur le chiffrage",
+      "contact": "Philippe Delattre",
+      "statut": "Confirmé",
+      "est_ce_rdv": true
+    },
+    {
+      "id": "R033",
+      "date": "2026-11-05",
+      "heure": "10:00",
+      "type": "Visite sur site",
+      "objet": "Revue annuelle achats",
+      "contact": "Aurélie Vasseur",
+      "statut": "Planifié",
+      "est_ce_rdv": false
+    }
+  ],
+  "donnees_manquantes": []
+}

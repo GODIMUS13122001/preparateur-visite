@@ -1,0 +1,6 @@
+{
+  "service": "ntfy",
+  "serveur": "https://ntfy.sh",
+  "topic": "<nom-de-canal-aleatoire>",
+  "topic_agenda": "<nom-de-canal-aleatoire>"
+}

@@ -1,0 +1,13 @@
+{
+  "name": "Préparateur de visite",
+  "short_name": "Préparateur",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#120A29",
+  "theme_color": "#120A29",
+  "lang": "fr",
+  "icons": [
+    { "src": "/icones/icone-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icones/icone-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" }
+  ]
+}

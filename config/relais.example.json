@@ -1,0 +1,8 @@
+{
+  "url": "https://<votre-projet>.vercel.app",
+  "cle_moteur": "<généré par scripts/deployer_relais.sh>",
+  "cle_acces": "<généré par scripts/deployer_relais.sh>",
+  "canal": "<généré par scripts/deployer_relais.sh>",
+  "projet_vercel": "<votre-projet>",
+  "cle_agenda": "<généré par scripts/deployer_relais.sh>"
+}

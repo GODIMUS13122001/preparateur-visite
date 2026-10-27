@@ -1,0 +1,32 @@
+# Secrets et réglages locaux : jamais sur GitHub (modèles dans config/*.example.json)
+.env
+.env.*
+config/*.json
+!config/*.example.json
+relais/.vercel/
+
+# Données générées en local
+logs/
+data/sauvegardes/
+data/.crm_actif
+modeles/
+*.m4a
+
+# Dépendances et compilations
+.venv/
+node_modules/
+dist/
+dist-test/
+__pycache__/
+.fabrication/
+*.dmg
+
+.DS_Store
+
+# Clés temporaires du déploiement du relais, et données produites par l'appli en local
+relais/.cles.json
+.cles.json
+audio/*.webm
+audio/*.wav
+audio/*.ogg
+config/*.txt

@@ -1,0 +1,1 @@
+{ "installCommand": "npm install && cd mobile && npm install", "buildCommand": "cd mobile && npm run build", "outputDirectory": "mobile/dist", "regions": ["cdg1"] }

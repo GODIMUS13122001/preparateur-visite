@@ -1,0 +1,378 @@
+{
+  "meta": {
+    "source": "Export_CRM_Orvane_demo_20261009.xlsx",
+    "date_reference": "2026-10-09",
+    "genere_le": "2026-10-09T15:37:17",
+    "regle": "Indicateurs recalculés à partir des colonnes de saisie (aucune valeur de formule lue)"
+  },
+  "rendez_vous": {
+    "id": "R012",
+    "date": "2026-10-19",
+    "heure_debut": "10:00",
+    "heure_fin": "11:30",
+    "type": "Visite sur site",
+    "lieu": "Interparfums - Paris",
+    "objet": "Présentation des maquettes de coffrets éco-conçus",
+    "statut": "Planifié",
+    "contact": {
+      "id": "C007",
+      "nom": "Claire Fontaine",
+      "poste": "Responsable développement packaging"
+    },
+    "commercial": {
+      "id": "U002",
+      "nom": "Julien Morel"
+    },
+    "transaction_liee": {
+      "id": "T008",
+      "nom": "Interparfums - Coffrets éditions limitées 2027"
+    },
+    "brief_prepare": "Non"
+  },
+  "entreprise": {
+    "id": "E004",
+    "nom": "Interparfums",
+    "site_web": "https://www.interparfums.fr",
+    "description": "Créateur et distributeur de parfums sous licence et marques propres (Montblanc, Jimmy Choo, Coach, Lacoste, Lanvin).",
+    "secteur": "Grande consommation",
+    "sous_secteur": "Parfums et cosmétiques",
+    "segment": "ETI",
+    "effectif": "250 - 999",
+    "ca_annuel_tranche": "100 M€ - 1 Md€",
+    "adresse": "10 rue de Solférino, 75007 Paris",
+    "region": "Île-de-France",
+    "groupe": "Interparfums",
+    "cotee": "Oui",
+    "code_bourse": "ITP.PA",
+    "proprietaire": "Julien Morel",
+    "phase_cycle_vie": "Client",
+    "statut_compte": "Actif",
+    "client_depuis": "2023-06-05",
+    "potentiel_annuel": 210000,
+    "ca_12_mois": 101897.3,
+    "ca_12_mois_precedents": 98669.3,
+    "concurrent_principal": "Cartonnages Vauclair",
+    "conditions_paiement": "60 jours",
+    "contexte": "Client sur les coffrets rigides premium des éditions de fin d'année. Commandes très saisonnières, concentrées entre mai et septembre.",
+    "enjeux": "Préparation des éditions limitées 2027 ; intérêt marqué pour des coffrets sans calage plastique.",
+    "transactions_ouvertes": 1,
+    "pipeline_ouvert": 95000,
+    "tickets_ouverts": 0,
+    "date_derniere_activite": "2026-09-21",
+    "taux_couverture_potentiel": 0.485
+  },
+  "contacts": [
+    {
+      "id": "C007",
+      "nom": "Mme Claire Fontaine",
+      "poste": "Responsable développement packaging",
+      "service": "Packaging",
+      "niveau_decision": "Décideur",
+      "contact_cle": "Oui",
+      "canal_prefere": "Visite",
+      "notes": "Sensible au design et à l'éco-conception.",
+      "date_dernier_echange": "2026-09-21",
+      "interactions_12_mois": 5,
+      "interlocuteur_du_rdv": true
+    },
+    {
+      "id": "C008",
+      "nom": "M. Hugo Perrin",
+      "poste": "Acheteur",
+      "service": "Achats",
+      "niveau_decision": "Influenceur",
+      "contact_cle": "Non",
+      "canal_prefere": "E-mail",
+      "notes": "Suit les délais et la facturation.",
+      "date_dernier_echange": "2026-08-07",
+      "interactions_12_mois": 2,
+      "interlocuteur_du_rdv": false
+    }
+  ],
+  "activites_recentes": [
+    {
+      "id": "A0227",
+      "date": "2026-09-21",
+      "type": "Appel",
+      "contact": "Claire Fontaine",
+      "objet": "Point d'avancement projet",
+      "contenu": "Échange téléphonique avec Claire Fontaine sur le calendrier concernant les coffrets des éditions limitées 2027. Décision interne attendue dans les prochaines semaines.",
+      "resultat": "Neutre",
+      "transaction": null,
+      "prochaine_action": "Planifier une visite de site",
+      "echeance": "2026-10-06"
+    },
+    {
+      "id": "A0203",
+      "date": "2026-09-07",
+      "type": "E-mail",
+      "contact": "Claire Fontaine",
+      "objet": "Envoi du compte rendu de visite",
+      "contenu": "Envoi à Claire Fontaine du compte rendu de la visite du 03/09/2026 et des prochaines étapes convenues.",
+      "resultat": "Neutre",
+      "transaction": "T008",
+      "prochaine_action": null,
+      "echeance": null
+    },
+    {
+      "id": "A0201",
+      "date": "2026-09-03",
+      "type": "Visite terrain",
+      "contact": "Claire Fontaine",
+      "objet": "Compte rendu de visite",
+      "contenu": "Point avec Claire Fontaine sur la campagne de fin d'année : livraisons conformes et dans les délais. Les éditions limitées 2027 seront arbitrées en novembre ; Claire Fontaine souhaite voir des maquettes de coffrets sans calage plastique.",
+      "resultat": "Positif",
+      "transaction": "T008",
+      "prochaine_action": "Préparer trois maquettes de coffrets éco-conçus",
+      "echeance": "2026-10-16"
+    },
+    {
+      "id": "A0187",
+      "date": "2026-08-07",
+      "type": "Appel",
+      "contact": "Hugo Perrin",
+      "objet": "Ajustement de commande",
+      "contenu": "Appel de Hugo Perrin pour ajuster les quantités de la prochaine commande d'emballages éco-conçus mono-matériau. Modification prise en compte.",
+      "resultat": "Positif",
+      "transaction": null,
+      "prochaine_action": null,
+      "echeance": null
+    },
+    {
+      "id": "A0107",
+      "date": "2026-01-20",
+      "type": "E-mail",
+      "contact": "Hugo Perrin",
+      "objet": "Envoi de fiche technique",
+      "contenu": "Envoi à Hugo Perrin de la fiche technique et des certificats des coffrets rigides premium.",
+      "resultat": "Neutre",
+      "transaction": null,
+      "prochaine_action": null,
+      "echeance": null
+    },
+    {
+      "id": "A0100",
+      "date": "2026-01-02",
+      "type": "Réunion visio",
+      "contact": "Claire Fontaine",
+      "objet": "Cadrage du besoin",
+      "contenu": "Réunion Teams avec Claire Fontaine pour cadrer le besoin concernant les coffrets des éditions limitées 2027. Liste des prérequis techniques partagée.",
+      "resultat": "Positif",
+      "transaction": null,
+      "prochaine_action": "Planifier une visite de site",
+      "echeance": "2026-01-19"
+    },
+    {
+      "id": "A0083",
+      "date": "2025-10-23",
+      "type": "Note",
+      "contact": "Claire Fontaine",
+      "objet": "Information organisation",
+      "contenu": "Note interne : Claire Fontaine a mentionné une réorganisation du service achats ; à surveiller.",
+      "resultat": "Neutre",
+      "transaction": null,
+      "prochaine_action": null,
+      "echeance": null
+    },
+    {
+      "id": "A0016",
+      "date": "2025-03-03",
+      "type": "Appel",
+      "contact": "Hugo Perrin",
+      "objet": "Relance proposition",
+      "contenu": "Appel de relance sur la dernière proposition. Hugo Perrin demande quelques jours pour consolider les retours internes.",
+      "resultat": "Neutre",
+      "transaction": null,
+      "prochaine_action": null,
+      "echeance": null
+    },
+    {
+      "id": "A0015",
+      "date": "2025-03-03",
+      "type": "Visite terrain",
+      "contact": "Hugo Perrin",
+      "objet": "Visite de suivi",
+      "contenu": "Visite de suivi avec Hugo Perrin. Revue des commandes en cours et des prévisions du trimestre sur les coffrets rigides premium. Pas de difficulté particulière signalée. Hugo Perrin évoque les coffrets des éditions limitées 2027.",
+      "resultat": "Neutre",
+      "transaction": null,
+      "prochaine_action": "Envoyer la documentation technique",
+      "echeance": "2025-03-17"
+    },
+    {
+      "id": "A0004",
+      "date": "2025-01-15",
+      "type": "Visite terrain",
+      "contact": "Hugo Perrin",
+      "objet": "Présentation des nouveautés 2025",
+      "contenu": "Présentation des nouveautés 2025 à Hugo Perrin, notamment les emballages éco-conçus mono-matériau. Accueil favorable et demande d'échantillons.",
+      "resultat": "Positif",
+      "transaction": null,
+      "prochaine_action": "Envoyer le devis",
+      "echeance": "2025-01-27"
+    }
+  ],
+  "dernier_compte_rendu_visite": {
+    "id": "A0201",
+    "date": "2026-09-03",
+    "contact": "Claire Fontaine",
+    "objet": "Compte rendu de visite",
+    "texte_integral": "Point avec Claire Fontaine sur la campagne de fin d'année : livraisons conformes et dans les délais. Les éditions limitées 2027 seront arbitrées en novembre ; Claire Fontaine souhaite voir des maquettes de coffrets sans calage plastique.",
+    "autres_participants": null
+  },
+  "transactions": [
+    {
+      "id": "T008",
+      "nom": "Interparfums - Coffrets éditions limitées 2027",
+      "phase": "Rendez-vous programmé",
+      "statut": "Ouverte",
+      "probabilite": 0.2,
+      "montant": 95000,
+      "montant_pondere": 19000.0,
+      "type": "Affaire existante",
+      "produit": "Coffrets rigides premium",
+      "contact_principal": "Claire Fontaine",
+      "date_creation": "2026-09-03",
+      "cloture_prevue": "2027-01-29",
+      "cloture_effective": null,
+      "prochaine_etape": "Présenter trois maquettes de coffrets éco-conçus",
+      "concurrent": "Cartonnages Vauclair",
+      "motif_perte": null,
+      "liee_au_rdv": true
+    },
+    {
+      "id": "T009",
+      "nom": "Interparfums - Coffrets fin d'année 2026",
+      "phase": "Conclu gagné",
+      "statut": "Gagnée",
+      "probabilite": 1,
+      "montant": 118000,
+      "montant_pondere": 118000,
+      "type": "Affaire existante",
+      "produit": "Coffrets rigides premium",
+      "contact_principal": "Claire Fontaine",
+      "date_creation": "2026-01-12",
+      "cloture_prevue": "2026-04-14",
+      "cloture_effective": "2026-04-14",
+      "prochaine_etape": null,
+      "concurrent": null,
+      "motif_perte": null,
+      "liee_au_rdv": false
+    }
+  ],
+  "tickets": [],
+  "commandes": {
+    "synthese": {
+      "nombre": 7,
+      "ca_12_mois": 101897.3,
+      "ca_par_produit": {
+        "Emballages éco-conçus mono-matériau": 101897.3
+      },
+      "livrees_avec_date": 6,
+      "en_retard": 1,
+      "retard_max_jours": 3,
+      "retard_moyen_jours_sur_retards": 3.0,
+      "non_livrees": [
+        "CMD-2026-0293"
+      ]
+    },
+    "detail": [
+      {
+        "id": "CMD-2026-0293",
+        "date": "2026-10-05",
+        "produit": "Emballages éco-conçus mono-matériau",
+        "quantite": 42,
+        "remise": 0.04,
+        "montant_ht": 16531.2,
+        "livraison_prevue": "2026-10-19",
+        "livraison_effective": null,
+        "retard_jours": null,
+        "statut": "En cours de livraison"
+      },
+      {
+        "id": "CMD-2026-0271",
+        "date": "2026-08-12",
+        "produit": "Emballages éco-conçus mono-matériau",
+        "quantite": 36,
+        "remise": 0.05,
+        "montant_ht": 14022.0,
+        "livraison_prevue": "2026-08-26",
+        "livraison_effective": "2026-08-25",
+        "retard_jours": 0,
+        "statut": "Facturée"
+      },
+      {
+        "id": "CMD-2026-0253",
+        "date": "2026-06-29",
+        "produit": "Emballages éco-conçus mono-matériau",
+        "quantite": 30,
+        "remise": 0.05,
+        "montant_ht": 11685.0,
+        "livraison_prevue": "2026-07-13",
+        "livraison_effective": "2026-07-13",
+        "retard_jours": 0,
+        "statut": "Facturée"
+      },
+      {
+        "id": "CMD-2026-0231",
+        "date": "2026-05-01",
+        "produit": "Emballages éco-conçus mono-matériau",
+        "quantite": 40,
+        "remise": 0.04,
+        "montant_ht": 15744.0,
+        "livraison_prevue": "2026-05-15",
+        "livraison_effective": "2026-05-18",
+        "retard_jours": 3,
+        "statut": "Facturée"
+      },
+      {
+        "id": "CMD-2026-0209",
+        "date": "2026-03-02",
+        "produit": "Emballages éco-conçus mono-matériau",
+        "quantite": 41,
+        "remise": 0.05,
+        "montant_ht": 15969.5,
+        "livraison_prevue": "2026-03-16",
+        "livraison_effective": "2026-03-16",
+        "retard_jours": 0,
+        "statut": "Facturée"
+      },
+      {
+        "id": "CMD-2026-0192",
+        "date": "2026-01-15",
+        "produit": "Emballages éco-conçus mono-matériau",
+        "quantite": 31,
+        "remise": 0.04,
+        "montant_ht": 12201.6,
+        "livraison_prevue": "2026-01-29",
+        "livraison_effective": "2026-01-29",
+        "retard_jours": 0,
+        "statut": "Facturée"
+      },
+      {
+        "id": "CMD-2025-0168",
+        "date": "2025-11-17",
+        "produit": "Emballages éco-conçus mono-matériau",
+        "quantite": 40,
+        "remise": 0.04,
+        "montant_ht": 15744.0,
+        "livraison_prevue": "2025-12-01",
+        "livraison_effective": "2025-12-01",
+        "retard_jours": 0,
+        "statut": "Facturée"
+      }
+    ]
+  },
+  "prochains_rendez_vous": [
+    {
+      "id": "R012",
+      "date": "2026-10-19",
+      "heure": "10:00",
+      "type": "Visite sur site",
+      "objet": "Présentation des maquettes de coffrets éco-conçus",
+      "contact": "Claire Fontaine",
+      "statut": "Planifié",
+      "est_ce_rdv": true
+    }
+  ],
+  "donnees_manquantes": []
+}

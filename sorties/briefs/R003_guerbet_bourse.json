@@ -1,0 +1,13 @@
+{
+  "statut": "ok",
+  "ticker": "GBT.PA",
+  "source": "Yahoo Finance",
+  "date_cours": "2026-10-15",
+  "devise": "EUR",
+  "dernier_cours": 6.3,
+  "variation_1_mois_pct": -14.9,
+  "variation_3_mois_pct": -28.9,
+  "variation_12_mois_pct": -55.1,
+  "plus_haut_52_semaines": 18.26,
+  "plus_bas_52_semaines": 6.3
+}

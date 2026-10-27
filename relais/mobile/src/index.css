@@ -1,0 +1,113 @@
+@import "tailwindcss";
+
+@theme {
+  --color-creme: #FAF9F6;
+  --color-encre: #120A29;
+  --color-texte: #030303;
+  --color-violet: #5723F3;
+  --color-violet-vif: #8257F5;
+  --color-violet-profond: #31148A;
+  --color-lavande: #AC8FF9;
+  --color-lilas: #D8CCFB;
+  --color-voile: #F3EFFE;
+  --color-ardoise: #6A647A;
+  --color-brume: #6A647A;
+  --color-nuage: #ECE8F0;
+  --color-fond: #F2EEF6;
+  --color-alerte: #9F4708;
+  --color-alerte-fond: #FDF1E6;
+  --color-ok: #146B33;
+  --color-ok-fond: #EAF7EF;
+  --color-corail: #C23A1E;
+  --color-corail-vif: #D9482B;
+  --color-corail-fond: #FCEDE8;
+  --color-erreur: #C62F3B;
+  --color-erreur-fond: #FCEDEE;
+  /* Typographie de la charte : Fraunces pour les titres et les grands chiffres, Geist pour le texte */
+  --font-sans: "Geist Variable", system-ui, -apple-system, "Helvetica Neue", sans-serif;
+  --font-serif: "Fraunces Variable", Georgia, serif;
+}
+
+/* Carte prospect : l'accent violet devient corail pour tout ce qui est dans la carte (boutons, jauge, pastilles, ombres) */
+.theme-prospect {
+  --color-violet: #C23A1E; --color-violet-vif: #D9482B; --color-violet-profond: #8A2410;
+  --color-lavande: #F0A28F; --color-lilas: #F8D5CB; --color-voile: #FCEDE8;
+}
+:where(.theme-prospect) :focus-visible { outline-color: var(--color-corail); }
+
+/* Tout est fixe : seule la carte bouge (glissé latéral) et son contenu défile. Pas de rebond de la page sur iPhone. */
+html, body { position: fixed; inset: 0; overflow: hidden; overscroll-behavior: none; }
+html { background-color: var(--color-fond); }
+#root { height: 100%; overflow: hidden; }
+/* Fond crème voilé de lilas. Sur téléphone : un seul calque immobile, sans mode de fusion,
+   pour que le glissé des cartes et le défilement restent à pleine vitesse. */
+body { color: var(--color-texte); font-family: var(--font-sans); -webkit-font-smoothing: antialiased; background-color: var(--color-fond); }
+body::before {
+  content: ""; position: fixed; inset: 0; z-index: 0; pointer-events: none;
+  background:
+    radial-gradient(900px 600px at 88% -8%, rgba(172, 143, 249, 0.32), transparent 62%),
+    radial-gradient(800px 600px at -8% 108%, rgba(240, 196, 222, 0.30), transparent 62%);
+}
+#root { position: relative; z-index: 1; }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; } }
+
+@keyframes flux { to { stroke-dashoffset: -24; } }
+@keyframes reflet { 0%, 55% { transform: translateX(-100%); } 100% { transform: translateX(100%); } }
+
+/* Mobile : zones sûres de l'iPhone, pas de rebond ni de sélection accidentelle */
+html { -webkit-tap-highlight-color: transparent; }
+body { overscroll-behavior-y: none; }
+.haut-sur { padding-top: max(env(safe-area-inset-top), 12px); }
+.bas-sur { padding-bottom: max(env(safe-area-inset-bottom), 16px); }
+@keyframes onde { 0%, 100% { transform: scaleY(0.35); } 50% { transform: scaleY(1); } }
+
+/* Accessibilité : anneau de focus visible (violet sur clair, lavande sur fond sombre) */
+:focus-visible { outline: 3px solid var(--color-violet); outline-offset: 2px; }
+.sombre :focus-visible { outline-color: var(--color-lavande); }
+input::placeholder { opacity: 1; }
+button, [role="button"], a { touch-action: manipulation; -webkit-user-select: none; user-select: none; -webkit-touch-callout: none; }
+input, textarea, select { font-size: 16px; }
+
+/* Barre de lecture du mode voiture : zone tactile de 44 px, trait fin */
+input[type="range"].curseur { -webkit-appearance: none; appearance: none; width: 100%; height: 44px; background: transparent; touch-action: pan-y; }
+input[type="range"].curseur::-webkit-slider-runnable-track { height: 10px; border-radius: 9999px; background: linear-gradient(to right, var(--color-lavande) var(--rempli, 0%), rgba(255,255,255,0.42) var(--rempli, 0%)); }
+input[type="range"].curseur::-moz-range-track { height: 10px; border-radius: 9999px; background: rgba(255,255,255,0.42); }
+input[type="range"].curseur::-moz-range-progress { height: 10px; border-radius: 9999px; background: var(--color-lavande); }
+input[type="range"].curseur::-webkit-slider-thumb { -webkit-appearance: none; width: 32px; height: 32px; margin-top: -11px; border-radius: 9999px; background: #fff; border: 0; box-shadow: 0 2px 8px rgba(0,0,0,0.4); }
+input[type="range"].curseur::-moz-range-thumb { width: 32px; height: 32px; border-radius: 9999px; background: #fff; border: 0; box-shadow: 0 2px 8px rgba(0,0,0,0.4); }
+input[type="range"].curseur:disabled { opacity: 0.5; }
+
+/* Titres et grands chiffres en Fraunces */
+h1, h2, .titre { font-family: var(--font-serif); font-weight: 560; letter-spacing: -0.015em; font-optical-sizing: auto; }
+.chiffre { font-family: var(--font-serif); font-variant-numeric: lining-nums tabular-nums; }
+textarea, input { -webkit-user-select: text; user-select: text; }
+
+/* Retour au toucher sur tous les boutons (Emil Kowalski) : léger enfoncement, 160 ms, courbe de sortie franche */
+:where(button, a[href]):not(:disabled) { transition-property: scale, color, background-color, border-color, box-shadow, opacity; transition-duration: 160ms; transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1); }
+:where(button, a[href]):not(:disabled):not(.sans-pression):active { scale: 0.97; }
+/* pendant un glissé de carte, rien ne s'enfonce sous le doigt */
+[data-glisse] :where(button, a[href]):active { scale: 1; }
+
+
+/* Mouvements continus confiés au navigateur (hors du fil JavaScript) */
+@keyframes defile { from { transform: translateX(0); } to { transform: translateX(calc(-50% - 1rem)); } }
+.anime-defile { animation: defile 40s linear infinite; }
+@keyframes pouls { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.8); opacity: 0.35; } }
+.anime-pouls { animation: pouls 1.8s cubic-bezier(0.23, 1, 0.32, 1) infinite; will-change: transform, opacity; }
+@keyframes halo { 0%, 100% { transform: scale(1); opacity: 0.55; } 50% { transform: scale(1.12); opacity: 0.85; } }
+.anime-halo { animation: halo 4.5s ease-in-out infinite; }
+@keyframes monte { 0% { transform: translateY(6px); opacity: 0; } 40% { opacity: 1; } 100% { transform: translateY(-6px); opacity: 0; } }
+.anime-monte { animation: monte 1.6s cubic-bezier(0.23, 1, 0.32, 1) infinite; }
+@media (prefers-reduced-motion: reduce) { .anime-defile, .anime-pouls, .anime-halo, .anime-monte { animation: none; } }
+/* Rien ne tourne pour rien : onglet caché, ou carte qui n'est pas celle du dessus */
+html[data-cache] *, html[data-cache] *::before, html[data-cache] *::after,
+.en-pause *, .en-pause *::before, .en-pause *::after { animation-play-state: paused !important; }
+
+/* Carte du paquet : accélération réservée au geste (posée par le script du paquet pendant le glissé) */
+[data-glisse] .carte-haut { will-change: transform; }
+
+/* App installée : l'heure et la batterie de l'iPhone sont écrites en blanc ; une fine bande marine les rend lisibles */
+.barre-etat { display: none; }
+@media (display-mode: standalone) {
+  .barre-etat { display: block; position: fixed; top: 0; left: 0; right: 0; height: env(safe-area-inset-top); background: #120A29; z-index: 40; pointer-events: none; }
+}

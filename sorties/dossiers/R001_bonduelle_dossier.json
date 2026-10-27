@@ -1,0 +1,430 @@
+{
+  "meta": {
+    "source": "Export_CRM_Orvane_demo_20261009.xlsx",
+    "date_reference": "2026-10-09",
+    "genere_le": "2026-10-15T09:42:14",
+    "regle": "Indicateurs recalculés à partir des colonnes de saisie (aucune valeur de formule lue)"
+  },
+  "rendez_vous": {
+    "id": "R001",
+    "date": "2026-10-12",
+    "heure_debut": "09:30",
+    "heure_fin": "11:00",
+    "type": "Visite sur site",
+    "lieu": "Bonduelle - Villeneuve-d'Ascq",
+    "objet": "Revue de la proposition de renouvellement de l'accord-cadre étiquettes 2027",
+    "statut": "Confirmé",
+    "contact": {
+      "id": "C001",
+      "nom": "Nathalie Dubreuil",
+      "poste": "Responsable achats emballages"
+    },
+    "commercial": {
+      "id": "U002",
+      "nom": "Julien Morel"
+    },
+    "transaction_liee": {
+      "id": "T001",
+      "nom": "Bonduelle - Renouvellement accord-cadre étiquettes 2027"
+    },
+    "brief_prepare": "Non"
+  },
+  "entreprise": {
+    "id": "E001",
+    "nom": "Bonduelle",
+    "site_web": "https://www.bonduelle.com",
+    "description": "Groupe agroalimentaire familial spécialisé dans les légumes transformés (conserve, surgelé, frais) ; marques Bonduelle et Cassegrain.",
+    "secteur": "Grande consommation",
+    "sous_secteur": "Légumes transformés",
+    "segment": "Grand compte",
+    "effectif": "10 000 et plus",
+    "ca_annuel_tranche": "1 - 10 Md€",
+    "adresse": "Rue Nicolas Appert, 59650 Villeneuve-d'Ascq",
+    "region": "Hauts-de-France",
+    "groupe": "Groupe Bonduelle",
+    "cotee": "Oui",
+    "code_bourse": "BON.PA",
+    "proprietaire": "Julien Morel",
+    "phase_cycle_vie": "Client",
+    "statut_compte": "À surveiller",
+    "client_depuis": "2022-03-01",
+    "potentiel_annuel": 420000,
+    "ca_12_mois": 239722.4,
+    "ca_12_mois_precedents": 211725.6,
+    "concurrent_principal": "Labelis Group",
+    "conditions_paiement": "60 jours fin de mois",
+    "contexte": "Client historique sur les étiquettes adhésives des gammes conserve. Les achats emballages sont pilotés depuis Villeneuve-d'Ascq, avec une validation qualité systématique de chaque nouvelle référence. Le groupe mène un plan de transformation centré sur la rentabilité et le désendettement : la direction achats a durci ses objectifs de réduction des coûts d'emballage.",
+    "enjeux": "Renouvellement de l'accord-cadre étiquettes 2027 ; passage à des emballages mono-matériau sur deux gammes ; sécurisation des délais de livraison après le retard de septembre.",
+    "transactions_ouvertes": 2,
+    "pipeline_ouvert": 250000,
+    "tickets_ouverts": 1,
+    "date_derniere_activite": "2026-10-05",
+    "taux_couverture_potentiel": 0.571
+  },
+  "contacts": [
+    {
+      "id": "C001",
+      "nom": "Mme Nathalie Dubreuil",
+      "poste": "Responsable achats emballages",
+      "service": "Achats",
+      "niveau_decision": "Décideur",
+      "contact_cle": "Oui",
+      "canal_prefere": "Visite",
+      "notes": "Interlocutrice principale. Très attentive au respect des délais et aux indexations matières.",
+      "date_dernier_echange": "2026-10-05",
+      "interactions_12_mois": 8,
+      "interlocuteur_du_rdv": true
+    },
+    {
+      "id": "C002",
+      "nom": "M. Kevin Lemaire",
+      "poste": "Chef de projet packaging",
+      "service": "R&D packaging",
+      "niveau_decision": "Prescripteur",
+      "contact_cle": "Non",
+      "canal_prefere": "E-mail",
+      "notes": "Porte le projet d'emballages mono-matériau. Apprécie les échantillons physiques.",
+      "date_dernier_echange": "2026-04-10",
+      "interactions_12_mois": 4,
+      "interlocuteur_du_rdv": false
+    }
+  ],
+  "activites_recentes": [
+    {
+      "id": "A0251",
+      "date": "2026-10-05",
+      "type": "E-mail",
+      "contact": "Nathalie Dubreuil",
+      "objet": "Confirmation du rendez-vous du 12/10",
+      "contenu": "Nathalie Dubreuil accuse réception de la proposition et confirme le rendez-vous du 12/10 à 9h30. Elle souhaite y voir un engagement écrit sur les délais de livraison, avec pénalités.",
+      "resultat": "À relancer",
+      "transaction": "T001",
+      "prochaine_action": "Préparer un engagement écrit sur les délais avec pénalités",
+      "echeance": "2026-10-12"
+    },
+    {
+      "id": "A0246",
+      "date": "2026-09-29",
+      "type": "E-mail",
+      "contact": "Nathalie Dubreuil",
+      "objet": "Envoi de la proposition de renouvellement",
+      "contenu": "Envoi de la proposition de renouvellement de l'accord-cadre étiquettes 2027 : 186 000 € annuels, indexation papier plafonnée à 4 %, engagement de livraison sous 10 jours ouvrés.",
+      "resultat": "Neutre",
+      "transaction": "T001",
+      "prochaine_action": "Relancer pour fixer la revue de la proposition",
+      "echeance": "2026-10-05"
+    },
+    {
+      "id": "A0235",
+      "date": "2026-09-24",
+      "type": "Appel",
+      "contact": "Nathalie Dubreuil",
+      "objet": "Retard de livraison étiquettes",
+      "contenu": "Appel de Nathalie Dubreuil, mécontente : la livraison d'étiquettes prévue le 15/09 est arrivée le 24/09, ce qui a obligé le site à décaler une production. Ticket SAV ouvert. Elle rappelle que la ponctualité pèsera dans la décision de renouvellement.",
+      "resultat": "Négatif",
+      "transaction": "T001",
+      "prochaine_action": "Proposer un plan de sécurisation des délais",
+      "echeance": "2026-10-12"
+    },
+    {
+      "id": "A0163",
+      "date": "2026-06-26",
+      "type": "E-mail",
+      "contact": "Nathalie Dubreuil",
+      "objet": "Envoi du compte rendu de visite",
+      "contenu": "Envoi à Nathalie Dubreuil du compte rendu de la visite du 24/06/2026 et des prochaines étapes convenues.",
+      "resultat": "Neutre",
+      "transaction": "T001",
+      "prochaine_action": null,
+      "echeance": null
+    },
+    {
+      "id": "A0160",
+      "date": "2026-06-24",
+      "type": "Visite terrain",
+      "contact": "Nathalie Dubreuil",
+      "objet": "Compte rendu de visite",
+      "contenu": "Visite au site de Villeneuve-d'Ascq avec Nathalie Dubreuil et Kevin Lemaire. Bilan semestriel positif sur la qualité d'impression, mais remarque appuyée sur les délais : deux livraisons hors fenêtre au printemps. Nathalie Dubreuil confirme le lancement du renouvellement de l'accord-cadre à la rentrée et demande une proposition intégrant une indexation papier plafonnée. Kevin Lemaire s'intéresse aux étiquettes en papier certifié pour la gamme bio et à un passage au mono-matériau.",
+      "resultat": "Positif",
+      "transaction": "T001",
+      "prochaine_action": "Envoyer la proposition de renouvellement avant fin septembre",
+      "echeance": "2026-09-30"
+    },
+    {
+      "id": "A0143",
+      "date": "2026-05-11",
+      "type": "Note",
+      "contact": "Nathalie Dubreuil",
+      "objet": "Information organisation",
+      "contenu": "Note interne : Nathalie Dubreuil a mentionné une réorganisation du service achats ; à surveiller.",
+      "resultat": "Neutre",
+      "transaction": null,
+      "prochaine_action": null,
+      "echeance": null
+    },
+    {
+      "id": "A0129",
+      "date": "2026-04-10",
+      "type": "Réunion visio",
+      "contact": "Kevin Lemaire",
+      "objet": "Cadrage emballages mono-matériau",
+      "contenu": "Réunion Teams avec Kevin Lemaire pour cadrer le passage au mono-matériau sur la gamme bio. Contraintes : tenue en autoclave, compatibilité avec l'étiqueteuse actuelle, papier certifié.",
+      "resultat": "Positif",
+      "transaction": "T002",
+      "prochaine_action": "Envoyer les fiches techniques papier certifié",
+      "echeance": "2026-04-24"
+    },
+    {
+      "id": "A0118",
+      "date": "2026-03-06",
+      "type": "Visite terrain",
+      "contact": "Kevin Lemaire",
+      "objet": "Visite de suivi",
+      "contenu": "Visite de suivi avec Kevin Lemaire. Revue des commandes en cours et des prévisions du trimestre sur les caisses carton ondulé personnalisées. Pas de difficulté particulière signalée. Kevin Lemaire évoque le renouvellement de l'accord-cadre étiquettes 2027.",
+      "resultat": "Neutre",
+      "transaction": null,
+      "prochaine_action": "Envoyer la documentation technique",
+      "echeance": "2026-03-23"
+    },
+    {
+      "id": "A0115",
+      "date": "2026-03-02",
+      "type": "Visite terrain",
+      "contact": "Kevin Lemaire",
+      "objet": "Présentation des nouveautés 2026",
+      "contenu": "Présentation des nouveautés 2026 à Kevin Lemaire, notamment les caisses carton ondulé personnalisées. Accueil favorable et demande d'échantillons.",
+      "resultat": "Positif",
+      "transaction": null,
+      "prochaine_action": "Envoyer la documentation technique",
+      "echeance": "2026-03-20"
+    },
+    {
+      "id": "A0111",
+      "date": "2026-02-09",
+      "type": "Réunion visio",
+      "contact": "Nathalie Dubreuil",
+      "objet": "Cadrage du besoin",
+      "contenu": "Réunion Teams avec Nathalie Dubreuil pour cadrer le besoin concernant le renouvellement de l'accord-cadre étiquettes 2027. Liste des prérequis techniques partagée.",
+      "resultat": "Positif",
+      "transaction": null,
+      "prochaine_action": "Transmettre des échantillons",
+      "echeance": "2026-02-27"
+    }
+  ],
+  "dernier_compte_rendu_visite": {
+    "id": "A0160",
+    "date": "2026-06-24",
+    "contact": "Nathalie Dubreuil",
+    "objet": "Compte rendu de visite",
+    "texte_integral": "Visite au site de Villeneuve-d'Ascq avec Nathalie Dubreuil et Kevin Lemaire. Bilan semestriel positif sur la qualité d'impression, mais remarque appuyée sur les délais : deux livraisons hors fenêtre au printemps. Nathalie Dubreuil confirme le lancement du renouvellement de l'accord-cadre à la rentrée et demande une proposition intégrant une indexation papier plafonnée. Kevin Lemaire s'intéresse aux étiquettes en papier certifié pour la gamme bio et à un passage au mono-matériau.",
+    "autres_participants": "Kevin Lemaire"
+  },
+  "transactions": [
+    {
+      "id": "T001",
+      "nom": "Bonduelle - Renouvellement accord-cadre étiquettes 2027",
+      "phase": "Contrat envoyé",
+      "statut": "Ouverte",
+      "probabilite": 0.9,
+      "montant": 186000,
+      "montant_pondere": 167400.0,
+      "type": "Renouvellement",
+      "produit": "Étiquettes adhésives haute définition",
+      "contact_principal": "Nathalie Dubreuil",
+      "date_creation": "2026-06-24",
+      "cloture_prevue": "2026-11-30",
+      "cloture_effective": null,
+      "prochaine_etape": "Défendre la proposition et l'engagement sur les délais lors de la revue du 12/10",
+      "concurrent": "Labelis Group",
+      "motif_perte": null,
+      "liee_au_rdv": true
+    },
+    {
+      "id": "T002",
+      "nom": "Bonduelle - Emballages mono-matériau gamme bio",
+      "phase": "Qualifié pour achat",
+      "statut": "Ouverte",
+      "probabilite": 0.4,
+      "montant": 64000,
+      "montant_pondere": 25600.0,
+      "type": "Nouvelle affaire",
+      "produit": "Emballages éco-conçus mono-matériau",
+      "contact_principal": "Kevin Lemaire",
+      "date_creation": "2026-06-24",
+      "cloture_prevue": "2027-02-26",
+      "cloture_effective": null,
+      "prochaine_etape": "Faire valider les échantillons papier certifié",
+      "concurrent": null,
+      "motif_perte": null,
+      "liee_au_rdv": false
+    }
+  ],
+  "tickets": [
+    {
+      "id": "K001",
+      "objet": "Retard de livraison étiquettes (commande de septembre)",
+      "categorie": "Livraison",
+      "priorite": "Haute",
+      "statut": "En cours",
+      "ouvert": true,
+      "date_creation": "2026-09-24",
+      "date_cloture": null,
+      "delai_resolution_jours": null,
+      "description": "Livraison prévue le 15/09, réceptionnée le 24/09. Impact client : décalage d'une production. Analyse de cause en cours côté logistique (saturation transporteur).",
+      "contact": "Nathalie Dubreuil",
+      "responsable": "Lucie Martin - Service client"
+    },
+    {
+      "id": "K015",
+      "objet": "Demande de fiches techniques papier certifié",
+      "categorie": "Documentation",
+      "priorite": "Basse",
+      "statut": "Fermé",
+      "ouvert": false,
+      "date_creation": "2026-07-03",
+      "date_cloture": "2026-07-10",
+      "delai_resolution_jours": 7,
+      "description": "Envoi des fiches techniques et certificats du papier certifié pour le projet mono-matériau.",
+      "contact": "Kevin Lemaire",
+      "responsable": "Karim Haddou - Qualité"
+    }
+  ],
+  "commandes": {
+    "synthese": {
+      "nombre": 8,
+      "ca_12_mois": 239722.4,
+      "ca_par_produit": {
+        "Étiquettes adhésives haute définition": 211202.4,
+        "Caisses carton ondulé personnalisées": 28520.0
+      },
+      "livrees_avec_date": 7,
+      "en_retard": 3,
+      "retard_max_jours": 9,
+      "retard_moyen_jours_sur_retards": 4.7,
+      "non_livrees": [
+        "CMD-2026-0288"
+      ]
+    },
+    "detail": [
+      {
+        "id": "CMD-2026-0288",
+        "date": "2026-10-01",
+        "produit": "Étiquettes adhésives haute définition",
+        "quantite": 45,
+        "remise": 0.06,
+        "montant_ht": 10152.0,
+        "livraison_prevue": "2026-10-14",
+        "livraison_effective": null,
+        "retard_jours": null,
+        "statut": "En cours de livraison"
+      },
+      {
+        "id": "CMD-2026-0279",
+        "date": "2026-09-01",
+        "produit": "Étiquettes adhésives haute définition",
+        "quantite": 48,
+        "remise": 0.06,
+        "montant_ht": 10828.8,
+        "livraison_prevue": "2026-09-15",
+        "livraison_effective": "2026-09-24",
+        "retard_jours": 9,
+        "statut": "Livrée"
+      },
+      {
+        "id": "CMD-2026-0257",
+        "date": "2026-07-09",
+        "produit": "Étiquettes adhésives haute définition",
+        "quantite": 202,
+        "remise": 0.05,
+        "montant_ht": 46056.0,
+        "livraison_prevue": "2026-07-23",
+        "livraison_effective": "2026-07-21",
+        "retard_jours": 0,
+        "statut": "Facturée"
+      },
+      {
+        "id": "CMD-2026-0235",
+        "date": "2026-05-13",
+        "produit": "Étiquettes adhésives haute définition",
+        "quantite": 162,
+        "remise": 0.05,
+        "montant_ht": 36936.0,
+        "livraison_prevue": "2026-05-27",
+        "livraison_effective": "2026-05-27",
+        "retard_jours": 0,
+        "statut": "Facturée"
+      },
+      {
+        "id": "CMD-2026-0213",
+        "date": "2026-03-16",
+        "produit": "Étiquettes adhésives haute définition",
+        "quantite": 169,
+        "remise": 0.07,
+        "montant_ht": 37720.8,
+        "livraison_prevue": "2026-03-30",
+        "livraison_effective": "2026-04-01",
+        "retard_jours": 2,
+        "statut": "Facturée"
+      },
+      {
+        "id": "CMD-2026-0193",
+        "date": "2026-01-16",
+        "produit": "Étiquettes adhésives haute définition",
+        "quantite": 166,
+        "remise": 0.07,
+        "montant_ht": 37051.2,
+        "livraison_prevue": "2026-01-30",
+        "livraison_effective": "2026-02-02",
+        "retard_jours": 3,
+        "statut": "Facturée"
+      },
+      {
+        "id": "CMD-2025-0172",
+        "date": "2025-11-27",
+        "produit": "Étiquettes adhésives haute définition",
+        "quantite": 147,
+        "remise": 0.08,
+        "montant_ht": 32457.6,
+        "livraison_prevue": "2025-12-11",
+        "livraison_effective": "2025-12-10",
+        "retard_jours": 0,
+        "statut": "Facturée"
+      },
+      {
+        "id": "CMD-2025-0154",
+        "date": "2025-10-14",
+        "produit": "Caisses carton ondulé personnalisées",
+        "quantite": 50,
+        "remise": 0.08,
+        "montant_ht": 28520.0,
+        "livraison_prevue": "2025-10-28",
+        "livraison_effective": "2025-10-27",
+        "retard_jours": 0,
+        "statut": "Facturée"
+      }
+    ]
+  },
+  "prochains_rendez_vous": [
+    {
+      "id": "R001",
+      "date": "2026-10-12",
+      "heure": "09:30",
+      "type": "Visite sur site",
+      "objet": "Revue de la proposition de renouvellement de l'accord-cadre étiquettes 2027",
+      "contact": "Nathalie Dubreuil",
+      "statut": "Confirmé",
+      "est_ce_rdv": true
+    },
+    {
+      "id": "R030",
+      "date": "2026-11-02",
+      "heure": "10:00",
+      "type": "Visite sur site",
+      "objet": "Revue des échantillons papier certifié",
+      "contact": "Kevin Lemaire",
+      "statut": "Planifié",
+      "est_ce_rdv": false
+    }
+  ],
+  "donnees_manquantes": []
+}

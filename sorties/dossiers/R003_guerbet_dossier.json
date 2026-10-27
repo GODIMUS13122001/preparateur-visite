@@ -1,0 +1,403 @@
+{
+  "meta": {
+    "source": "Export_CRM_Orvane_demo_20261009.xlsx",
+    "date_reference": "2026-10-09",
+    "genere_le": "2026-10-15T09:42:13",
+    "regle": "Indicateurs recalculés à partir des colonnes de saisie (aucune valeur de formule lue)"
+  },
+  "rendez_vous": {
+    "id": "R003",
+    "date": "2026-10-12",
+    "heure_debut": "17:00",
+    "heure_fin": "17:45",
+    "type": "Visio",
+    "lieu": "Microsoft Teams",
+    "objet": "Préparation de l'audit fournisseur de novembre",
+    "statut": "Confirmé",
+    "contact": {
+      "id": "C005",
+      "nom": "Sophie Marchand",
+      "poste": "Responsable assurance qualité fournisseurs"
+    },
+    "commercial": {
+      "id": "U002",
+      "nom": "Julien Morel"
+    },
+    "transaction_liee": {
+      "id": "T006",
+      "nom": "Guerbet - Notices multilingues 2027"
+    },
+    "brief_prepare": "Oui"
+  },
+  "entreprise": {
+    "id": "E003",
+    "nom": "Guerbet",
+    "site_web": "https://www.guerbet.com",
+    "description": "Laboratoire pharmaceutique spécialiste des produits de contraste pour l'imagerie médicale et de la radiologie interventionnelle.",
+    "secteur": "Pharmaceutique et santé",
+    "sous_secteur": "Imagerie médicale",
+    "segment": "ETI",
+    "effectif": "1 000 - 4 999",
+    "ca_annuel_tranche": "100 M€ - 1 Md€",
+    "adresse": "15 rue des Vanesses, 93420 Villepinte",
+    "region": "Île-de-France",
+    "groupe": "Groupe Guerbet",
+    "cotee": "Oui",
+    "code_bourse": "GBT.PA",
+    "proprietaire": "Julien Morel",
+    "phase_cycle_vie": "Client",
+    "statut_compte": "À risque",
+    "client_depuis": "2020-09-01",
+    "potentiel_annuel": 260000,
+    "ca_12_mois": 148852.55,
+    "ca_12_mois_precedents": 129404.7,
+    "concurrent_principal": "Kartéa Pharma Pack",
+    "conditions_paiement": "60 jours",
+    "contexte": "Client sur les étuis et notices pharmaceutiques. Exigences qualité très élevées et audits fournisseurs annuels. Le groupe traverse une période difficile (plan de transformation, réduction des coûts, changement de direction générale) : les achats renégocient les contrats fournisseurs et la qualité est sous surveillance renforcée. Une non-conformité d'impression en juin 2026 a fragilisé la relation.",
+    "enjeux": "Restaurer la confiance après l'incident qualité de juin ; réussir l'audit fournisseur de novembre ; projet de refonte des notices multilingues pour 2027.",
+    "transactions_ouvertes": 1,
+    "pipeline_ouvert": 72000,
+    "tickets_ouverts": 0,
+    "date_derniere_activite": "2026-09-30",
+    "taux_couverture_potentiel": 0.573
+  },
+  "contacts": [
+    {
+      "id": "C005",
+      "nom": "Mme Sophie Marchand",
+      "poste": "Responsable assurance qualité fournisseurs",
+      "service": "Qualité",
+      "niveau_decision": "Décideur",
+      "contact_cle": "Oui",
+      "canal_prefere": "E-mail",
+      "notes": "Pilote les audits fournisseurs. Exige des réponses écrites et documentées.",
+      "date_dernier_echange": "2026-09-30",
+      "interactions_12_mois": 5,
+      "interlocuteur_du_rdv": true
+    },
+    {
+      "id": "C006",
+      "nom": "M. Olivier Chen",
+      "poste": "Responsable conditionnement",
+      "service": "Production",
+      "niveau_decision": "Prescripteur",
+      "contact_cle": "Non",
+      "canal_prefere": "Téléphone",
+      "notes": "Porte le projet de refonte des notices multilingues.",
+      "date_dernier_echange": "2026-04-28",
+      "interactions_12_mois": 3,
+      "interlocuteur_du_rdv": false
+    }
+  ],
+  "activites_recentes": [
+    {
+      "id": "A0248",
+      "date": "2026-09-30",
+      "type": "E-mail",
+      "contact": "Sophie Marchand",
+      "objet": "Date de l'audit fournisseur",
+      "contenu": "Sophie Marchand confirme l'audit fournisseur les 18 et 19 novembre et demande le rapport 8D finalisé avant l'audit.",
+      "resultat": "À relancer",
+      "transaction": "T006",
+      "prochaine_action": "Envoyer le rapport 8D finalisé",
+      "echeance": "2026-10-12"
+    },
+    {
+      "id": "A0178",
+      "date": "2026-07-20",
+      "type": "E-mail",
+      "contact": "Sophie Marchand",
+      "objet": "Attribution étiquettes d'inviolabilité",
+      "contenu": "Guerbet informe que le marché des étiquettes d'inviolabilité est attribué à un autre fournisseur, en lien avec l'incident qualité de juin.",
+      "resultat": "Négatif",
+      "transaction": "T007",
+      "prochaine_action": null,
+      "echeance": null
+    },
+    {
+      "id": "A0173",
+      "date": "2026-07-13",
+      "type": "E-mail",
+      "contact": "Sophie Marchand",
+      "objet": "Envoi du compte rendu de visite",
+      "contenu": "Envoi à Sophie Marchand du compte rendu de la visite du 08/07/2026 et des prochaines étapes convenues.",
+      "resultat": "Neutre",
+      "transaction": "T006",
+      "prochaine_action": null,
+      "echeance": null
+    },
+    {
+      "id": "A0172",
+      "date": "2026-07-08",
+      "type": "Visite terrain",
+      "contact": "Sophie Marchand",
+      "objet": "Compte rendu de visite",
+      "contenu": "Réunion qualité avec Sophie Marchand suite à la non-conformité d'impression du lot de juin (numéro de lot illisible sur environ 2 % des étuis). Présentation du plan d'actions : contrôle vision renforcé et double validation des BAT. Sophie Marchand maintient les commandes mais annonce un audit fournisseur en novembre. Olivier Chen évoque un projet de refonte des notices multilingues pour 2027.",
+      "resultat": "Neutre",
+      "transaction": "T006",
+      "prochaine_action": "Transmettre le rapport 8D finalisé et caler la date d'audit",
+      "echeance": "2026-07-31"
+    },
+    {
+      "id": "A0157",
+      "date": "2026-06-18",
+      "type": "Appel",
+      "contact": "Sophie Marchand",
+      "objet": "Signalement non-conformité",
+      "contenu": "Appel de Sophie Marchand : numéro de lot illisible sur une partie des étuis livrés. Lot bloqué côté client. Ticket qualité ouvert en priorité critique.",
+      "resultat": "Négatif",
+      "transaction": null,
+      "prochaine_action": "Remplacer le lot et lancer l'analyse 8D",
+      "echeance": "2026-06-25"
+    },
+    {
+      "id": "A0135",
+      "date": "2026-04-28",
+      "type": "Visite terrain",
+      "contact": "Olivier Chen",
+      "objet": "Visite de suivi",
+      "contenu": "Visite de suivi avec Olivier Chen. Revue des commandes en cours et des prévisions du trimestre sur les étuis carton pharmaceutiques imprimés. Pas de difficulté particulière signalée. Olivier Chen évoque la refonte des notices multilingues.",
+      "resultat": "Neutre",
+      "transaction": null,
+      "prochaine_action": null,
+      "echeance": null
+    },
+    {
+      "id": "A0116",
+      "date": "2026-03-03",
+      "type": "Visite terrain",
+      "contact": "Olivier Chen",
+      "objet": "Revue d'activité semestrielle",
+      "contenu": "Revue d'activité semestrielle avec Olivier Chen. Satisfaction globale sur la qualité ; demande de visibilité sur l'évolution des prix des matières. Échange sur la refonte des notices multilingues.",
+      "resultat": "Positif",
+      "transaction": null,
+      "prochaine_action": null,
+      "echeance": null
+    },
+    {
+      "id": "A0082",
+      "date": "2025-10-21",
+      "type": "Appel",
+      "contact": "Olivier Chen",
+      "objet": "Ajustement de commande",
+      "contenu": "Appel de Olivier Chen pour ajuster les quantités de la prochaine commande de notices pharmaceutiques pliées. Modification prise en compte.",
+      "resultat": "À relancer",
+      "transaction": null,
+      "prochaine_action": "Planifier une visite de site",
+      "echeance": "2025-11-06"
+    },
+    {
+      "id": "A0063",
+      "date": "2025-08-13",
+      "type": "Appel",
+      "contact": "Olivier Chen",
+      "objet": "Point d'avancement projet",
+      "contenu": "Échange téléphonique avec Olivier Chen sur le calendrier concernant la refonte des notices multilingues. Décision interne attendue dans les prochaines semaines.",
+      "resultat": "Neutre",
+      "transaction": null,
+      "prochaine_action": null,
+      "echeance": null
+    },
+    {
+      "id": "A0050",
+      "date": "2025-06-24",
+      "type": "Réunion visio",
+      "contact": "Sophie Marchand",
+      "objet": "Cadrage du besoin",
+      "contenu": "Réunion Teams avec Sophie Marchand pour cadrer le besoin concernant la refonte des notices multilingues. Liste des prérequis techniques partagée.",
+      "resultat": "Positif",
+      "transaction": null,
+      "prochaine_action": null,
+      "echeance": null
+    }
+  ],
+  "dernier_compte_rendu_visite": {
+    "id": "A0172",
+    "date": "2026-07-08",
+    "contact": "Sophie Marchand",
+    "objet": "Compte rendu de visite",
+    "texte_integral": "Réunion qualité avec Sophie Marchand suite à la non-conformité d'impression du lot de juin (numéro de lot illisible sur environ 2 % des étuis). Présentation du plan d'actions : contrôle vision renforcé et double validation des BAT. Sophie Marchand maintient les commandes mais annonce un audit fournisseur en novembre. Olivier Chen évoque un projet de refonte des notices multilingues pour 2027.",
+    "autres_participants": "Olivier Chen"
+  },
+  "transactions": [
+    {
+      "id": "T006",
+      "nom": "Guerbet - Notices multilingues 2027",
+      "phase": "Qualifié pour achat",
+      "statut": "Ouverte",
+      "probabilite": 0.4,
+      "montant": 72000,
+      "montant_pondere": 28800.0,
+      "type": "Nouvelle affaire",
+      "produit": "Notices pharmaceutiques pliées",
+      "contact_principal": "Olivier Chen",
+      "date_creation": "2026-07-08",
+      "cloture_prevue": "2027-03-31",
+      "cloture_effective": null,
+      "prochaine_etape": "Rassurer sur la qualité avant l'audit fournisseur de novembre",
+      "concurrent": "Kartéa Pharma Pack",
+      "motif_perte": null,
+      "liee_au_rdv": true
+    },
+    {
+      "id": "T007",
+      "nom": "Guerbet - Étiquettes d'inviolabilité",
+      "phase": "Conclu perdu",
+      "statut": "Perdue",
+      "probabilite": 0,
+      "montant": 45000,
+      "montant_pondere": 0,
+      "type": "Nouvelle affaire",
+      "produit": "Étiquettes d'inviolabilité",
+      "contact_principal": "Sophie Marchand",
+      "date_creation": "2026-03-02",
+      "cloture_prevue": "2026-07-20",
+      "cloture_effective": "2026-07-20",
+      "prochaine_etape": null,
+      "concurrent": "Kartéa Pharma Pack",
+      "motif_perte": "Incident qualité sur un lot d'étuis en juin",
+      "liee_au_rdv": false
+    }
+  ],
+  "tickets": [
+    {
+      "id": "K002",
+      "objet": "Non-conformité d'impression du numéro de lot",
+      "categorie": "Qualité produit",
+      "priorite": "Critique",
+      "statut": "Fermé",
+      "ouvert": false,
+      "date_creation": "2026-06-18",
+      "date_cloture": "2026-07-30",
+      "delai_resolution_jours": 42,
+      "description": "Numéro de lot illisible sur environ 2 % des étuis. Lot remplacé sous six jours. Rapport 8D transmis en version provisoire, version finale attendue par le client.",
+      "contact": "Sophie Marchand",
+      "responsable": "Karim Haddou - Qualité"
+    }
+  ],
+  "commandes": {
+    "synthese": {
+      "nombre": 7,
+      "ca_12_mois": 148852.55,
+      "ca_par_produit": {
+        "Étiquettes d'inviolabilité": 65211.6,
+        "Étuis carton pharmaceutiques imprimés": 48186.95,
+        "Notices pharmaceutiques pliées": 35454.0
+      },
+      "livrees_avec_date": 7,
+      "en_retard": 3,
+      "retard_max_jours": 3,
+      "retard_moyen_jours_sur_retards": 2.3,
+      "non_livrees": []
+    },
+    "detail": [
+      {
+        "id": "CMD-2026-0285",
+        "date": "2026-09-21",
+        "produit": "Étiquettes d'inviolabilité",
+        "quantite": 70,
+        "remise": 0.04,
+        "montant_ht": 20832.0,
+        "livraison_prevue": "2026-10-05",
+        "livraison_effective": "2026-10-08",
+        "retard_jours": 3,
+        "statut": "Livrée"
+      },
+      {
+        "id": "CMD-2026-0262",
+        "date": "2026-07-17",
+        "produit": "Étiquettes d'inviolabilité",
+        "quantite": 84,
+        "remise": 0.05,
+        "montant_ht": 24738.0,
+        "livraison_prevue": "2026-07-31",
+        "livraison_effective": "2026-07-31",
+        "retard_jours": 0,
+        "statut": "Facturée"
+      },
+      {
+        "id": "CMD-2026-0239",
+        "date": "2026-05-25",
+        "produit": "Notices pharmaceutiques pliées",
+        "quantite": 219,
+        "remise": 0.04,
+        "montant_ht": 19972.8,
+        "livraison_prevue": "2026-06-08",
+        "livraison_effective": "2026-06-08",
+        "retard_jours": 0,
+        "statut": "Facturée"
+      },
+      {
+        "id": "CMD-2026-0212",
+        "date": "2026-03-12",
+        "produit": "Étuis carton pharmaceutiques imprimés",
+        "quantite": 151,
+        "remise": 0.03,
+        "montant_ht": 27096.95,
+        "livraison_prevue": "2026-03-26",
+        "livraison_effective": "2026-03-24",
+        "retard_jours": 0,
+        "statut": "Facturée"
+      },
+      {
+        "id": "CMD-2026-0195",
+        "date": "2026-01-30",
+        "produit": "Notices pharmaceutiques pliées",
+        "quantite": 168,
+        "remise": 0.03,
+        "montant_ht": 15481.2,
+        "livraison_prevue": "2026-02-13",
+        "livraison_effective": "2026-02-13",
+        "retard_jours": 0,
+        "statut": "Facturée"
+      },
+      {
+        "id": "CMD-2025-0175",
+        "date": "2025-12-05",
+        "produit": "Étuis carton pharmaceutiques imprimés",
+        "quantite": 120,
+        "remise": 0.05,
+        "montant_ht": 21090.0,
+        "livraison_prevue": "2025-12-19",
+        "livraison_effective": "2025-12-22",
+        "retard_jours": 3,
+        "statut": "Facturée"
+      },
+      {
+        "id": "CMD-2025-0155",
+        "date": "2025-10-14",
+        "produit": "Étiquettes d'inviolabilité",
+        "quantite": 66,
+        "remise": 0.04,
+        "montant_ht": 19641.6,
+        "livraison_prevue": "2025-10-28",
+        "livraison_effective": "2025-10-29",
+        "retard_jours": 1,
+        "statut": "Facturée"
+      }
+    ]
+  },
+  "prochains_rendez_vous": [
+    {
+      "id": "R003",
+      "date": "2026-10-12",
+      "heure": "17:00",
+      "type": "Visio",
+      "objet": "Préparation de l'audit fournisseur de novembre",
+      "contact": "Sophie Marchand",
+      "statut": "Confirmé",
+      "est_ce_rdv": true
+    },
+    {
+      "id": "R035",
+      "date": "2026-11-06",
+      "heure": "10:00",
+      "type": "Visite sur site",
+      "objet": "Atelier notices multilingues",
+      "contact": "Olivier Chen",
+      "statut": "Planifié",
+      "est_ce_rdv": false
+    }
+  ],
+  "donnees_manquantes": []
+}
